@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<scroll-view class="scrollarea" scroll-y type="list">
+  <view class="container">
+    <view class="goodbad">{{goodbad}}</view>
+    <view class="gua-area">
+      <text class="gua">{{gua}}</text>
+      <text class="manifest">{{manifest}}</text>
+    </view>
+    <view class="gua-pic">
+      <image class="yao-pic" src="../../resources/yao_pic/{{y6}}.png"></image>
+      <image class="yao-pic" src="../../resources/yao_pic/{{y5}}.png"></image>
+      <image class="yao-pic" src="../../resources/yao_pic/{{y4}}.png"></image>
+      <image class="yao-pic" src="../../resources/yao_pic/{{y3}}.png"></image>
+      <image class="yao-pic" src="../../resources/yao_pic/{{y2}}.png"></image>
+      <image class="yao-pic" src="../../resources/yao_pic/{{y1}}.png"></image>
+    </view>
+    <view class="yao-area">
+      <text class="yaoi">{{yaoi}}</text>
+      <text class="yao">{{yao}}</text>
+    </view>
+    <view class="turtle">
+      <button class="devine" bind:tap="onDevineTapped"></button>
+    </view>
+  </view>
+</scroll-view>
