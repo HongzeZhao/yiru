@@ -27,9 +27,19 @@ page {
   font-weight: bold;
 }
 
+.gua-pairs {
+    justify-content: space-evenly;
+}
+
+.gua-pair {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 .gua-area {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
+  text-align: center;
 }
 
 .gua-area .gua {
@@ -64,4 +74,8 @@ page {
   margin-top: 4px;
   width: 64px;
   height: 16px;
+}
+
+.mp-ext {
+    background-color: aquamarine;
 }

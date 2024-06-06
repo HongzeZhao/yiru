@@ -1,14 +1,18 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/gua/gua"
   ],
   "window": {
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "易经起卦",
+    "navigationBarTitleText": "易如黄历",
     "navigationBarBackgroundColor": "#ffffff"
   },
   "style": "v2",
   "componentFramework": "glass-easel",
   "sitemapLocation": "sitemap.json",
-  "lazyCodeLoading": "requiredComponents"
+  "lazyCodeLoading": "requiredComponents",
+  "useExtendedLib": {
+    "weui": true
+  }
 }
