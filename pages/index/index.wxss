@@ -37,7 +37,8 @@ page {
 }
 
 .gua-area {
-  font-size: 20px;
+  font-size: 14px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bold;
   text-align: center;
 }
@@ -51,8 +52,9 @@ page {
 }
 
 .yao-area {
-  margin-top: 12px;
-  margin-bottom: 12px;
+  margin: 12px;
+  margin-left: 30px;
+  margin-right: 30px;
   font-size: 12px;
   color: darkblue;
 }

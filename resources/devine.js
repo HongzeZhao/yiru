@@ -34,8 +34,9 @@ function getGuaDetail(code, dongYaoIndex) {
         let yaoidx = (rank - 1) * 6 + dongYaoIndex;
         let yao = yaos.yaos[yaoidx];
         ret["yaoText"] = yao.text;
-        ret["yaoIndex"] = yao.i;
+        ret["yaoIndex"] = yao.yaoi;
     }
+    console.log(ret);
     return ret;
 }
 

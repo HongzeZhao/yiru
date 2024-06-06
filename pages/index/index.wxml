@@ -9,11 +9,7 @@
                 <text class="manifest">{{benGua.manifest}}</text>
             </view>
             <view class="gua-pic">
-                <image wx:for="{{benGua.codes}}" wx:for-item="benYao"  class="yao-pic" src="../../resources/yao_pic/{{benYao}}.png"></image>
-            </view>
-            <view class="yao-area">
-                <text class="yaoi">{{benGua.yaoIndex}}</text>
-                <text class="yao">{{benGua.yaoText}}</text>
+                <image wx:for="{{benGua.codes}}" wx:key="benYao" wx:for-item="benYao"  class="yao-pic" src="../../resources/yao_pic/{{benYao}}.png"></image>
             </view>
         </view>
         <view class="weui-flex__item gua-pair">
@@ -22,7 +18,7 @@
                 <text class="manifest">{{huGua.manifest}}</text>
             </view>
             <view class="gua-pic">
-                <image wx:for="{{huGua.codes}}" wx:for-item="huYao" class="yao-pic" src="../../resources/yao_pic/{{huYao}}.png"></image>
+                <image wx:for="{{huGua.codes}}" wx:key="huYao" wx:for-item="huYao" class="yao-pic" src="../../resources/yao_pic/{{huYao}}.png"></image>
             </view>
         </view>
         <view class="weui-flex__item gua-pair">
@@ -31,9 +27,13 @@
                 <text class="manifest">{{bianGua.manifest}}</text>
             </view>
             <view class="gua-pic">
-                <image wx:for="{{bianGua.codes}}" wx:for-item="bianYao" class="yao-pic" src="../../resources/yao_pic/{{bianYao}}.png"></image>
+                <image wx:for="{{bianGua.codes}}" wx:key="bianYao" wx:for-item="bianYao" class="yao-pic" src="../../resources/yao_pic/{{bianYao}}.png"></image>
             </view>
         </view>
+    </view>
+    <view class="yao-area">
+        <text class="yaoi">{{benGua.yaoIndex}}</text>
+        <text class="yao">{{benGua.yaoText}}</text>
     </view>
     
     <view class="turtle">
