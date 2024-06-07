@@ -7,6 +7,7 @@ let gua_codes = [
 ]
 
 function getHuGua(code) {
+  // 互卦：第二三爻与四五爻整体互换
     return code[0] + code[3] + code[4] + code[1] + code[2] + code[5];
 }
 
@@ -31,8 +32,9 @@ function getGuaDetail(code, dongYaoIndex) {
     if (dongYaoIndex != null && dongYaoIndex >= 0) {
         ret["yaoLuck"] = detail[(6 - dongYaoIndex).toString()];
         let rank = detail["rank"];
-        let yaoidx = (rank - 1) * 6 + dongYaoIndex;
+        let yaoidx = (rank - 1) * 6 + (5 - dongYaoIndex);
         let yao = yaos.yaos[yaoidx];
+        ret["dongYaoIndex"] = dongYaoIndex;
         ret["yaoText"] = yao.text;
         ret["yaoIndex"] = yao.yaoi;
     }

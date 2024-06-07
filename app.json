@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/gua/gua"
+    "pages/main/main",
+    "pages/meihua/meihua"
   ],
   "window": {
     "navigationBarTextStyle": "black",

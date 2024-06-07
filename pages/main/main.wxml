@@ -1,0 +1,29 @@
+<!--pages/main.wxml-->
+<scroll-view class="scrollarea" scroll-y type="list">
+<view class="container">
+  <image class="watermark" src="pics/meihua.png" />
+  <view class="button" bindtap="onMeihuaClick">
+    <view class="button-background pink-bkg">
+      <view>
+        <image class="button-img" src="pics/meihua.png"></image>
+      </view>
+      <div>
+        <view class="button-text-title text-color-red">梅花易数</view>
+        <view class="button-text-desc text-color-red">梅花易数通过观察自然界中的现象和变化来进行预测，适用于日常生活中的吉凶祸福、人际关系、健康状况、天气变化、突发事件、商业决策。</view>
+      </div>
+    </view>
+  </view>
+
+  <view class="button" bindtap="onZiweiClick">
+    <view class="button-background tiffany-bkg">
+      <view>
+        <image class="button-img" src="pics/ziwei.png"></image>
+      </view>
+      <div>
+        <view class="button-text-title text-color-green">紫微斗数</view>
+        <view class="button-text-desc text-color-green">紫微斗数是一种复杂而精细的中国占星术系统，主要预测：性格、职业发展的方向和前景、财富积累的能力和财务管理习惯、婚姻与感情、家庭关系、健康状况和易患疾病、学业表现和学习能力、社交圈的关系、流年运势。</view>
+      </div>
+    </view>
+  </view>
+</view>
+</scroll-view>

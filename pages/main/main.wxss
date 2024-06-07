@@ -1,0 +1,76 @@
+/* pages/main.wxss */
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.button {
+  display: block;
+  width: calc(100% - 20px);
+  height: 150px;
+  border: none;
+  margin: 10px 5px;
+  border-radius: 10px;
+}
+
+.button:active {
+  background-color: #ca2b07; /* 点击后的背景颜色 */
+  opacity: 0.5; /* 点击后的透明度 */
+}
+
+.button-background {
+  display: flex;
+  align-items: center; /* 垂直居中 */
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.button-img {
+  height: 64px;
+  width: 64px;
+}
+
+.button-text-title {
+  padding-right: 10px;
+  padding-left: 10px;
+  font-size: 24px;
+}
+
+.button-text-desc {
+  padding-right: 10px;
+  padding-left: 10px;
+  font-size: 10px;
+}
+
+.watermark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  background-size: contain;
+  opacity: 0.2; /* 水印透明度 */
+}
+
+.text-color-red {
+  color: darkred;
+}
+
+.text-color-green {
+  color: #004440;
+}
+
+/* 颜色样式 */
+.pink-bkg {
+  background-color: #ffb6c1; /* 淡粉色 */
+}
+
+.tiffany-bkg {
+  background-color: #0abab5; /* Tiffany色 */
+}
+
+.gucci-bkg {
+  background-color: #3cb371; /* Gucci色 */
+}
