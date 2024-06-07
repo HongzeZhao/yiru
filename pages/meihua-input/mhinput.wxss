@@ -1,0 +1,113 @@
+/* pages/meihua-input/minput.wxss */
+.container {
+    padding: 20px;
+    background-color: #F9F9F9;
+  }
+  
+  .form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  
+  .label {
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+    color: #0ABAB5; /* Bootstrap默认字体颜色 */
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 14px;
+  }
+  
+  .picker {
+    flex: 1;
+    background-color: white;
+    border: 1px solid #0ABAB5; /* Bootstrap的表单控件边框颜色 */
+    border-radius: 0.25rem;
+    padding: 6px 12px;
+    color: #0ABAB5A0; /* Bootstrap的表单控件文本颜色 */
+    font-size: 14px;
+  }
+  
+  .picker::after {
+    display: none; /* 移除默认箭头，Bootstrap风格通常不使用该样式 */
+  }
+
+  .input-field {
+    flex: 1;
+    background-color: white;
+    border: 1px solid #0ABAB5; /* Bootstrap的表单控件边框颜色 */
+    border-radius: 0.25rem;
+    padding: 6px 12px;
+    margin-right: 5px;
+    color: #0A5A55; /* Bootstrap的表单控件文本颜色 */
+    font-size: 12px;
+  }
+
+  .input-tips {
+      font-size: 10px;
+      color: white;
+      background-color: #0ABAB5;
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 10px;
+      opacity: 0.7;
+  }
+
+  .divine {
+    background-color: #0ABAB5;
+    border: solid 1px #0ABAB5;
+    border-radius: 10px;
+  }
+  
+  .turtle {
+    overflow: hidden;
+    width: 128px;
+    height: 128px;
+    border-radius: 10px;
+    opacity: 0.9;
+    background-color: white;
+  }
+  
+  .divine-text {
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    padding-bottom: 10px;
+  }
+  
+  .divine:active {
+    opacity: 0.5;
+  }
+
+  .lunar-text {
+    font-size: 10px;
+    color: #0ABAB5;
+    border-radius: 5px;
+    padding: 10px;
+    border: solid 1px #0ABAB5;
+    margin-bottom: 10px;
+    opacity: 0.7;
+  }
+
+  .random-gen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: #0ABAB5;
+    background-color: #0ABAB51F;
+    border-radius: 5px;
+    padding: 10px;
+    border: solid 1px #0ABAB5;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .random-gen:active {
+      opacity: 0.5;
+  }

@@ -14,28 +14,6 @@ page {
   overflow-y:scroll;
 }
 
-.divine {
-  background-color: #e9967a;
-  border-radius: 10px;
-}
-
-.turtle {
-  overflow: hidden;
-  width: 128px;
-  height: 64px;
-}
-
-.divine-text {
-  text-align: center;
-  font-size: 16px;
-  color: darkred;
-  font-weight: bold;
-}
-
-.divine:active {
-  scale: 120%;
-}
-
 .goodbad {
   font-size: 64px;
   color: red;

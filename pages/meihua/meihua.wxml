@@ -44,11 +44,6 @@
         <text class="yaoi">{{benGua.yaoIndex}}</text>
         <text class="yao">{{benGua.yaoText}}</text>
     </view>
-    
-    <view class="divine" bind:tap="onDevineTapped">
-      <image src="img/turtleshell.webp" class="turtle"></image>
-      <view class="divine-text">点击起卦！</view>
-    </view>
 
     <view class="model-explain">
       {{modelExplain}}

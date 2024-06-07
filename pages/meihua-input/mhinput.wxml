@@ -1,0 +1,48 @@
+<!--pages/meihua-input/minput.wxml-->
+<scroll-view class="scrollarea" scroll-y type="list">
+<view class="container">
+  <view class="lunar-text" hidden="{{lunarText.length < 10}}">
+    <text>{{lunarText}}</text>
+  </view>
+  <view class="form-group">
+    <text class="label">出生日期：</text>
+    <picker mode="date" value="{{date}}" start="1900-01-01" end="2023-12-31" bindchange="bindDateChange">
+      <view class="picker">
+        {{date}}
+      </view>
+    </picker>
+  </view>
+  <view class="form-group">
+    <text class="label">出生时间：</text>
+    <picker mode="time" value="{{hour}}" bindchange="bindHourChange">
+      <view class="picker">
+        {{hour}}
+      </view>
+    </picker>
+  </view>
+  <view class="form-group">
+    <text class="label">性别：</text>
+    <picker mode="selector" range="{{genderRange}}" bindchange="bindGenderChange">
+      <view class="picker">
+        {{gender}}
+      </view>
+    </picker>
+  </view>
+  <view class="input-tips">
+    <text>梅花易数中的三个数字是用于起卦，分别代表天、地、人三才，蕴含了宇宙、自然与人的信息。可以随机也可以手输入。</text>
+  </view>
+  <view class="form-group">
+    <span class="label">数字：</span>
+    <input type="number" class="input-field" placeholder="请输入" bindinput="onInputIntegersOnly" value="{{number1}}" data-input-id="1"/>
+    <input type="number" class="input-field" placeholder="请输入" bindinput="onInputIntegersOnly" value="{{number2}}" data-input-id="2"/>
+    <input type="number" class="input-field" placeholder="请输入" bindinput="onInputIntegersOnly" value="{{number3}}" data-input-id="3"/>
+  </view>
+  <view class="random-gen" bind:tap="onGenRandomTapped">
+    <text>点击随机生成梅花易数的三个数</text>
+  </view>
+  <view class="divine" bind:tap="onDevineTapped">
+        <image src="img/estimate.png" class="turtle"></image>
+        <view class="divine-text">点击起卦！</view>
+    </view>
+</view>
+</scroll-view>

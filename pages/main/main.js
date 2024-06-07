@@ -10,7 +10,7 @@ Page({
 
   onMeihuaClick(e) {
     wx.navigateTo({
-      url: '/pages/meihua/meihua',
+      url: '/pages/meihua-input/mhinput',
     })
     console.log(e);
   },

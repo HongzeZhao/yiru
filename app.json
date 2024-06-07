@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/main/main",
-    "pages/meihua/meihua"
+    "pages/meihua/meihua",
+    "pages/meihua-input/mhinput"
   ],
   "window": {
     "navigationBarTextStyle": "black",
