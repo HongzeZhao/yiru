@@ -1,46 +1,86 @@
 <!--pages/meihua-input/minput.wxml-->
 <scroll-view class="scrollarea" scroll-y type="list">
 <view class="container">
-  <view class="lunar-text" hidden="{{lunarText.length < 10}}">
-    <text>{{lunarText}}</text>
-  </view>
+<view class="table-container" hidden="{{!lunarValid}}">
+    <view class="table-row table-head">
+        <view class="table-cell">{{yearText}}</view>
+        <view class="table-cell">{{monthText}}</view>
+        <view class="table-cell">{{dayText}}</view>
+        <view class="table-cell">{{hourText}}</view>
+    </view>
+    <view class="table-row">
+        <view class="table-cell">星期{{week}}</view>
+        <view class="table-cell">{{xiu}}</view>
+        <view class="table-cell">{{yuexiang}}</view>
+    </view>
+    <view class="table-row">
+        <view class="table-cell">{{bazi.year}}</view>
+        <view class="table-cell">{{bazi.month}}</view>
+        <view class="table-cell">{{bazi.day}}</view>
+        <view class="table-cell">{{bazi.time}}</view>
+    </view>
+    <view class="table-row">
+        <view class="table-cell">{{bazi.yearNaYin}}</view>
+        <view class="table-cell">{{bazi.monthNaYin}}</view>
+        <view class="table-cell">{{bazi.dayNaYin}}</view>
+        <view class="table-cell">{{bazi.timeNaYin}}</view>
+    </view>
+    <view class="table-row">
+        <view class="table-cell">{{bazi.yearWuxing}}</view>
+        <view class="table-cell">{{bazi.monthWuxing}}</view>
+        <view class="table-cell">{{bazi.dayWuxing}}</view>
+        <view class="table-cell">{{bazi.timeWuxing}}</view>
+    </view>
+    <view class="table-row">
+        <view class="table-cell">年太岁{{taisui.year}}</view>
+        <view class="table-cell">月太岁{{taisui.month}}</view>
+        <view class="table-cell">日太岁{{taisui.day}}</view>
+    </view>
+    <!-- 更多行数据... -->
+</view>
   <view class="form-group">
     <text class="label">出生日期：</text>
     <picker mode="date" value="{{date}}" start="1900-01-01" end="2023-12-31" bindchange="bindDateChange">
-      <view class="picker">
+      <view class="picker {{dateValid ? '' : 'error-state'}}">
         {{date}}
       </view>
     </picker>
+    <text hidden="{{dateValid}}" class="valid-check-tips">请输入</text>
   </view>
   <view class="form-group">
     <text class="label">出生时间：</text>
     <picker mode="time" value="{{hour}}" bindchange="bindHourChange">
-      <view class="picker">
+      <view class="picker {{hourValid ? '' : 'error-state'}}">
         {{hour}}
       </view>
     </picker>
+    <text hidden="{{hourValid}}" class="valid-check-tips">请输入</text>
   </view>
   <view class="form-group">
     <text class="label">性别：</text>
     <picker mode="selector" range="{{genderRange}}" bindchange="bindGenderChange">
-      <view class="picker">
+      <view class="picker {{genderValid ? '' : 'error-state'}}">
         {{gender}}
       </view>
     </picker>
+    <text hidden="{{genderValid}}" class="valid-check-tips">请输入</text>
   </view>
   <view class="input-tips">
     <text>梅花易数中的三个数字是用于起卦，分别代表天、地、人三才，蕴含了宇宙、自然与人的信息。可以随机也可以手输入。</text>
   </view>
   <view class="form-group">
-    <span class="label">数字：</span>
-    <input type="number" class="input-field" placeholder="请输入" bindinput="onInputIntegersOnly" value="{{number1}}" data-input-id="1"/>
-    <input type="number" class="input-field" placeholder="请输入" bindinput="onInputIntegersOnly" value="{{number2}}" data-input-id="2"/>
-    <input type="number" class="input-field" placeholder="请输入" bindinput="onInputIntegersOnly" value="{{number3}}" data-input-id="3"/>
+    <span class="label">起卦数字：</span>
+    <input type="number" class="input-field {{numberValid?'' : 'error-state'}}" placeholder="请输入" bindinput="onInputIntegersOnly" value="{{number1}}" data-input-id="1"/>
+    <input type="number" class="input-field {{numberValid?'' : 'error-state'}}" placeholder="请输入" bindinput="onInputIntegersOnly" value="{{number2}}" data-input-id="2"/>
+    <input type="number" class="input-field {{numberValid?'' : 'error-state'}}" placeholder="请输入" bindinput="onInputIntegersOnly" value="{{number3}}" data-input-id="3"/>
+  </view>
+  <view>
+    <text hidden="{{numberValid}}" class="valid-check-tips">请输入三个整数</text>
   </view>
   <view class="random-gen" bind:tap="onGenRandomTapped">
     <text>点击随机生成梅花易数的三个数</text>
   </view>
-  <view class="divine" bind:tap="onDevineTapped">
+  <view class="divine" bind:tap="ondivineTapped">
         <image src="img/estimate.png" class="turtle"></image>
         <view class="divine-text">点击起卦！</view>
     </view>

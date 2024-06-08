@@ -42,10 +42,7 @@ function getGuaDetail(code, dongYaoIndex) {
     return ret;
 }
 
-function devineByRandomNumber() {
-  let rand1 = Math.floor(Math.random() * 1000000);
-  let rand2 = Math.floor(Math.random() * 1000000);
-  let rand3 = Math.floor(Math.random() * 1000000);
+function divineByRandomNumbers(rand1, rand2, rand3) {
   let n1 = rand1 % 8;
   let n2 = rand2 % 8;
   let n3 = rand3 % 6;
@@ -53,13 +50,20 @@ function devineByRandomNumber() {
   let huCode = getHuGua(benCode);
   let bianCode = getBianGua(benCode, n3);
 
+  let benGua = getGuaDetail(benCode, n3);
+  let huGua = getGuaDetail(huCode);
+  let bianGua = getGuaDetail(bianCode);
+
+  let desc = `本卦为${benGua.name}${benGua.manifest}，动爻为第${n3+1}爻，互卦为${huGua.name}${huGua.manifest}，变卦为${benGua.name}${benGua.manifest}`;
+
   return {
-      benGua: getGuaDetail(benCode, n3),
-      huGua: getGuaDetail(huCode),
-      bianGua: getGuaDetail(bianCode)
+      benGua: benGua,
+      huGua: huGua,
+      bianGua: bianGua,
+      desc: desc
   };
 }
 
 module.exports = {
-  devineByRandomNumber: devineByRandomNumber
+  divineByRandomNumbers: divineByRandomNumbers
 }
