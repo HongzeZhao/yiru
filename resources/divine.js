@@ -54,7 +54,7 @@ function divineByRandomNumbers(rand1, rand2, rand3) {
   let huGua = getGuaDetail(huCode);
   let bianGua = getGuaDetail(bianCode);
 
-  let desc = `本卦为${benGua.name}${benGua.manifest}，动爻为第${n3+1}爻，互卦为${huGua.name}${huGua.manifest}，变卦为${benGua.name}${benGua.manifest}`;
+  let desc = `本卦为${benGua.name}${benGua.manifest}，动爻为第${n3+1}爻，互卦为${huGua.name}${huGua.manifest}，变卦为${bianGua.name}${bianGua.manifest}`;
 
   return {
       benGua: benGua,
