@@ -47,15 +47,15 @@
 
     <view class="loading-area" hidden="{{!loadingModel}}">
         <view>
-            <text> 正在加载大模型解卦... </text>
+            <image class="loading-img" src="../../resources/img/loading.gif"></image>
         </view>
         <view>
-            <image class="loading-img" src="img/loading.gif"></image>
+            <text> 正在加载大模型解读... </text>
         </view>
     </view>
 
     <view class="safety-tips" hidden="{{loadingModel}}">
-        <text> 以下为大模型解卦，仅供娱乐，切勿迷信 </text>
+        <text> 以下为大模型解读，仅供娱乐，切勿迷信 </text>
     </view>
     <view class="model-explain user-select" hidden="{{loadingModel}}">
         <mp-html content="{{modelExplain}}" />

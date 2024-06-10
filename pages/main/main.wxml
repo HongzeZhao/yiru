@@ -1,15 +1,61 @@
 <!--pages/main.wxml-->
 <scroll-view class="scrollarea" scroll-y type="list">
 <view class="container">
-  <image class="watermark" src="pics/meihua.png" />
+    <image class="watermark" src="../../resources/img/meihua.png" />
+    <view class="table-container">
+    <view class="table-row">
+        <view class="table-cell table-big-text">{{monthText}}月{{dayText}}</view>
+    </view>
+    </view>
+  <calendar config="{{calendarConfig}}" bind:afterTapDate="afterTapDate" />
+  <view class="table-container">
+    <view class="table-row table-head">
+        <view class="table-cell">{{bazi.year}}</view>
+        <view class="table-cell">{{bazi.month}}</view>
+        <view class="table-cell">{{bazi.day}}</view>
+        <view class="table-cell">{{bazi.time}}</view>
+    </view>
+    <view class="table-row table-row-height">
+        <view class="table-cell">{{bazi.yearNaYin}}</view>
+        <view class="table-cell">{{bazi.monthNaYin}}</view>
+        <view class="table-cell">{{bazi.dayNaYin}}</view>
+        <view class="table-cell">{{bazi.timeNaYin}}</view>
+    </view>
+    <view class="table-row table-row-height">
+        <view class="table-cell">{{bazi.yearWuxing}}</view>
+        <view class="table-cell">{{bazi.monthWuxing}}</view>
+        <view class="table-cell">{{bazi.dayWuxing}}</view>
+        <view class="table-cell">{{bazi.timeWuxing}}</view>
+    </view>
+  </view>
+  <view class="table-container">
+    <view>
+        <view class="table-row-yiji">
+            <text class="label-yiji label-color-green">宜</text>
+            <text class="yiji-text">{{dayYi}}</text>
+        </view>
+        <view class="table-row-yiji">
+            <text class="label-yiji label-color-red">忌</text> 
+            <text class="yiji-text">{{dayJi}}</text>
+        </view>
+        <view class="table-row-yiji">
+            <text class="label-yiji label-color-golden">太岁</text>
+            <text class="yiji-text">{{taisui.year}}[年] {{taisui.month}}[月] {{taisui.day}}[日]</text>
+        </view>
+        <view class="table-row-yiji">
+            <text class="label-yiji label-color-blue">冲煞</text>
+            <text class="yiji-text">{{chongsha.day}}[日] {{chongsha.time}}[时]</text>
+        </view>
+    </view>
+</view>
   <view class="button" bindtap="onMeihuaClick">
     <view class="button-background pink-bkg">
       <view>
-        <image class="button-img" src="pics/meihua.png"></image>
+        <image class="button-img" src="../../resources/img/ai.png"></image>
       </view>
       <div>
-        <view class="button-text-title text-color-red">梅花易数</view>
-        <view class="button-text-desc text-color-red">梅花易数通过观察自然界中的现象和变化来进行预测，适用于日常生活中的吉凶祸福、人际关系、健康状况、天气变化、突发事件、商业决策。</view>
+        <view class="button-text-title text-color-red">AI大模型解读</view>
+        <view class="button-text-desc text-color-red">我是一款基于传统文化智慧的 AI 助手，能够为你解解读每日黄历宜忌，结合中国传统文化为你解读生活的解惑，用科技让你的生活更加顺遂。</view>
       </div>
     </view>
   </view>
@@ -17,11 +63,12 @@
   <view class="button" bindtap="onZiweiClick">
     <view class="button-background tiffany-bkg">
       <view>
-        <image class="button-img" src="pics/ziwei.png"></image>
+        <image class="button-img" src="../../resources/img/ziwei.png"></image>
       </view>
       <div>
-        <view class="button-text-title text-color-green">紫微斗数</view>
-        <view class="button-text-desc text-color-green">紫微斗数是一种复杂而精细的中国占星术系统，主要预测：性格、职业发展的方向和前景、财富积累的能力和财务管理习惯、婚姻与感情、家庭关系、健康状况和易患疾病、学业表现和学习能力、社交圈的关系、流年运势。</view>
+        <view class="button-text-title text-color-green">易如智慧AI问答</view>
+        <view class="button-text-desc text-color-green">
+我是"易如"，专注于易经智慧的探索者。穿越千古《易》理，我将繁琐化简，带领你领悟八卦奥秘，六十四卦哲思，每日解锁易经精髓，让古老智慧点亮现代生活。</view>
       </div>
     </view>
   </view>

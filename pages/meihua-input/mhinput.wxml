@@ -36,8 +36,10 @@
         <view class="table-cell">月太岁{{taisui.month}}</view>
         <view class="table-cell">日太岁{{taisui.day}}</view>
     </view>
-    <!-- 更多行数据... -->
 </view>
+<view class="input-tips">
+    <text>我们不采集隐私喔，但是告诉大模型你的生日和性别之后会解读的更准！</text>
+  </view>
   <view class="form-group">
     <text class="label">出生日期：</text>
     <picker mode="date" value="{{date}}" start="1900-01-01" end="2023-12-31" bindchange="bindDateChange">
@@ -66,10 +68,10 @@
     <text hidden="{{genderValid}}" class="valid-check-tips">请输入</text>
   </view>
   <view class="input-tips">
-    <text>梅花易数中的三个数字是用于起卦，分别代表天、地、人三才，蕴含了宇宙、自然与人的信息。可以随机也可以手输入。</text>
+    <text>冥想一下你想要解读的事情，输入你第一意识的三个数字吧！</text>
   </view>
   <view class="form-group">
-    <span class="label">起卦数字：</span>
+    <span class="label">三个数字：</span>
     <input type="number" class="input-field {{numberValid?'' : 'error-state'}}" placeholder="请输入" bindinput="onInputIntegersOnly" value="{{number1}}" data-input-id="1"/>
     <input type="number" class="input-field {{numberValid?'' : 'error-state'}}" placeholder="请输入" bindinput="onInputIntegersOnly" value="{{number2}}" data-input-id="2"/>
     <input type="number" class="input-field {{numberValid?'' : 'error-state'}}" placeholder="请输入" bindinput="onInputIntegersOnly" value="{{number3}}" data-input-id="3"/>
@@ -78,11 +80,11 @@
     <text hidden="{{numberValid}}" class="valid-check-tips">请输入三个整数</text>
   </view>
   <view class="random-gen" bind:tap="onGenRandomTapped">
-    <text>点击随机生成梅花易数的三个数</text>
+    <text>懒得输入，随机生成三个数！</text>
   </view>
   <view class="divine" bind:tap="ondivineTapped">
-        <image src="img/estimate.png" class="turtle"></image>
-        <view class="divine-text">点击起卦！</view>
+        <image src="../../resources/img/brain.png" class="turtle"></image>
+        <view class="divine-text">问问大模型！</view>
     </view>
 </view>
 </scroll-view>

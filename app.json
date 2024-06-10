@@ -2,7 +2,8 @@
   "pages": [
     "pages/main/main",
     "pages/meihua/meihua",
-    "pages/meihua-input/mhinput"
+    "pages/meihua-input/mhinput",
+    "pages/talk/talk"
   ],
   "window": {
     "navigationBarTextStyle": "black",

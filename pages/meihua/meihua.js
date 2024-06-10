@@ -42,6 +42,6 @@ Page({
             })
           console.log(err)
         }
-      })
+      });
   },
 })

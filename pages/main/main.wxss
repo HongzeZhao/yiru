@@ -74,3 +74,80 @@
 .gucci-bkg {
   background-color: #3cb371; /* Gucci色 */
 }
+
+.table-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 12px;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  
+  .table-row {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px dashed rgb(255,222,233);
+    color: darkred;
+  }
+
+  .table-row-height {
+      height: 24px;
+  }
+
+  .table-head {
+      font-weight: bold;
+      color: white;
+      padding: 5px 2px 5px 2px;
+      background-color: darkred;
+  }
+  
+  .table-cell {
+    flex: 1;
+    padding: 2px;
+    text-align: center;
+    border-right: 1px dashed rgb(255,222,233);
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  .table-big-text {
+      font-size: 36px;
+      font-weight: bold;
+      background-image:
+      repeating-linear-gradient(-45deg, rgb(255, 248, 250) 0, rgb(255, 248, 250) 10px, #fff 0, #fff 20px);
+  }
+  
+  .table-row:last-child {
+    border-bottom: none;
+  }
+  
+  .table-cell:last-child {
+    border-right: none;
+  }
+
+  .table-row-yiji {
+      padding: 10px 10px 5px 20px;
+  }
+
+  .label-yiji {
+      margin-right: 20px;
+      padding: 2px;
+      border-radius: 3px;
+      color: white
+  }
+
+  .label-color-green {
+    background-color: green;
+  }
+
+  .label-color-red {
+    background-color: darkred;
+  }
+
+  .label-color-blue {
+    background-color: darkblue;
+  }
+
+  .label-color-golden {
+    background-color: darkgoldenrod;
+  }
