@@ -79,6 +79,8 @@ Page({
           });
 
         console.log(lunar.toFullString());
+    } else {
+        console.log("solar object null");
     }
   },
 
@@ -119,7 +121,7 @@ Page({
    */
   onLoad(options) {
       const now = new Date();
-      const nowDt = `${now.getFullYear()}-${now.getMonth()}-${now.getDay()}`;
+      const nowDt = `${now.getFullYear()}-${now.getMonth()+1}-${now.getDate()}`;
       const nowTime = `${now.getHours()}:${now.getMinutes()}`;
       this.onBirthdayChange(nowDt, nowTime);
   },
