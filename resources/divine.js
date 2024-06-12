@@ -42,7 +42,7 @@ function getGuaDetail(code, dongYaoIndex) {
     return ret;
 }
 
-function divineByRandomNumbers(rand1, rand2, rand3) {
+function divineByMeihuaNumbers(rand1, rand2, rand3) {
   let n1 = rand1 % 8;
   let n2 = rand2 % 8;
   let n3 = rand3 % 6;
@@ -60,10 +60,11 @@ function divineByRandomNumbers(rand1, rand2, rand3) {
       benGua: benGua,
       huGua: huGua,
       bianGua: bianGua,
+      dongYao: n3 + 1,
       desc: desc
   };
 }
 
 module.exports = {
-  divineByRandomNumbers: divineByRandomNumbers
+  divineByMeihuaNumbers: divineByMeihuaNumbers
 }

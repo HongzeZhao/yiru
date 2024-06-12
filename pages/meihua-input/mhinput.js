@@ -37,39 +37,44 @@ Page({
     let solar = this.getSolarObject(dtStr, timeStr);
     if (solar != null) {
         let lunar = solar.getLunar();
-        let bazi = lunar.getEightChar();
-        this.setData({
-            lunarText: lunar.toFullString(),
-            yearText: lunar.getYearInChinese(),
-            monthText: lunar.getMonthInChinese() + '月',
-            dayText: lunar.getDayInChinese() + '日',
-            hourText: lunar.getTimeZhi() + '时',
-            bazi: {
-                year: bazi.getYear() + '(' + lunar.getYearShengXiao() + ')',
-                month: bazi.getMonth() + '(' + lunar.getMonthShengXiao() + ')',
-                day: bazi.getDay() + '(' + lunar.getDayShengXiao() + ')',
-                time: bazi.getTime() + '(' + lunar.getTimeShengXiao() + ')',
-                yearWuxing: bazi.getYearWuXing(),
-                monthWuxing: bazi.getMonthWuXing(),
-                dayWuxing: bazi.getDayWuXing(),
-                timeWuxing: bazi.getTimeWuXing(),
-                yearNaYin: bazi.getYearNaYin(),
-                monthNaYin: bazi.getMonthNaYin(),
-                dayNaYin: bazi.getDayNaYin(),
-                timeNaYin: bazi.getTimeNaYin()
-            },
-            taisui: {
-                year: lunar.getYearPositionTaiSuiDesc(),
-                month: lunar.getMonthPositionTaiSuiDesc(),
-                day: lunar.getDayPositionTaiSuiDesc(),
-            },
-            week: lunar.getWeekInChinese(),
-            xiu: lunar.getXiu() + lunar.getAnimal() + lunar.getXiuLuck(),
-            yuexiang: lunar.getYueXiang(),
-            lunarValid: true
-          });
+        let lunarData = this.getLunarData(lunar);
+        lunarData['lunarValid'] = true;
+        this.setData(lunarData);
         console.log(lunar.toFullString());
     }
+  },
+
+  getLunarData(lunar) {
+    let bazi = lunar.getEightChar();
+    return {
+        lunarText: lunar.toFullString(),
+        yearText: lunar.getYearInChinese(),
+        monthText: lunar.getMonthInChinese() + '月',
+        dayText: lunar.getDayInChinese() + '日',
+        hourText: lunar.getTimeZhi() + '时',
+        bazi: {
+            year: bazi.getYear() + '(' + lunar.getYearShengXiao() + ')',
+            month: bazi.getMonth() + '(' + lunar.getMonthShengXiao() + ')',
+            day: bazi.getDay() + '(' + lunar.getDayShengXiao() + ')',
+            time: bazi.getTime() + '(' + lunar.getTimeShengXiao() + ')',
+            yearWuxing: bazi.getYearWuXing(),
+            monthWuxing: bazi.getMonthWuXing(),
+            dayWuxing: bazi.getDayWuXing(),
+            timeWuxing: bazi.getTimeWuXing(),
+            yearNaYin: bazi.getYearNaYin(),
+            monthNaYin: bazi.getMonthNaYin(),
+            dayNaYin: bazi.getDayNaYin(),
+            timeNaYin: bazi.getTimeNaYin()
+        },
+        taisui: {
+            year: lunar.getYearPositionTaiSuiDesc(),
+            month: lunar.getMonthPositionTaiSuiDesc(),
+            day: lunar.getDayPositionTaiSuiDesc(),
+        },
+        week: lunar.getWeekInChinese(),
+        xiu: lunar.getXiu() + lunar.getAnimal() + lunar.getXiuLuck(),
+        yuexiang: lunar.getYueXiang()
+      };
   },
 
   getSolarObject(dtStr, timeStr) {
@@ -151,8 +156,8 @@ Page({
     if (this.data.dateValid && this.data.hourValid && this.data.genderValid && this.data.numberValid) {
         let curLunar = Lunar.fromDate(new Date());
         let data = {
-            birthdayText: this.data.lunarText,
-            nowText: curLunar.toFullString(),
+            birthdayData: this.data,
+            nowData: this.getLunarData(curLunar),
             rand1: parseInt(this.data.number1),
             rand2: parseInt(this.data.number2),
             rand3: parseInt(this.data.number3),
