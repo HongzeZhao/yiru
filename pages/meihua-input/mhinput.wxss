@@ -1,7 +1,7 @@
 /* pages/meihua-input/minput.wxss */
 .container {
     padding: 20px;
-    background-color: #F9F9F9;
+    background-color: white;
   }
   
   .form-group {
