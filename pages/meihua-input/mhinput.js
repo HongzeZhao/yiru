@@ -9,6 +9,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    showModal: false,
     lunarText: '',
     date: '请选择日期',
     hour: '请选择时间',
@@ -148,6 +149,7 @@ Page({
     let n2 = this.data.number2 != undefined && this.data.number2.length > 0;
     let n3 = this.data.number3 != undefined && this.data.number3.length > 0;
     this.setData({
+        showModal: false,
         dateValid: this.data.date != undefined && this.data.date.split('-').length == 3,
         hourValid: this.data.hour != undefined && this.data.hour.split(':').length == 2,
         genderValid: this.data.gender === '男' || this.data.gender === '女',
@@ -163,11 +165,36 @@ Page({
             rand3: parseInt(this.data.number3),
             gender: this.data.gender
         };
-        var encodedData = encodeURIComponent(JSON.stringify(data));
-        wx.navigateTo({
-            url: `/pages/meihua/meihua?data=${encodedData}`,
-        });
+        let encodedData = encodeURIComponent(JSON.stringify(data));
+        if (wx.getStorageSync('meihua.agree') === true) {
+            wx.navigateTo({
+                url: `/pages/meihua/meihua?data=${this.data.encodedData}`,
+            });
+        } else {
+            this.setData({
+                encodedData: encodedData,
+                showModal: true
+            });
+        }
     }
+  },
+
+  onAgree(e) {
+    wx.setStorageSync('meihua.agree', true);
+
+    this.setData({
+        showModal: false
+      });
+    wx.navigateTo({
+        url: `/pages/meihua/meihua?data=${this.data.encodedData}`,
+    });
+  },
+
+  onRefuse(e) {
+      this.setData({
+        showModal: false
+      });
+      wx.navigateBack();
   },
 
   /**
