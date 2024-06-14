@@ -14,10 +14,10 @@ function getHuGua(code) {
 
 function getBianGua(code, i) {
     let gua = code.split('');
-    if (gua[i] === '0') {
-        gua[i] = '1';
+    if (gua[i-1] === '0') {
+        gua[i-1] = '1';
     } else {
-        gua[i] = '0';
+        gua[i-1] = '0';
     }
     return gua.join('');
 }
@@ -46,7 +46,8 @@ function getGuaDetail(code, dongYaoIndex) {
 function divineByMeihuaNumbers(rand1, rand2, rand3) {
   let n1 = rand1 % 8;
   let n2 = rand2 % 8;
-  let n3 = rand3 % 6;
+  let n3 = (rand1 + rand2 + rand3) % 6;
+      n3 = n3 == 0 ? 6 : n3;
   let benCode = gua_codes[n1] + gua_codes[n2]; // 内卦 + 外卦
   let huCode = getHuGua(benCode);
   let bianCode = getBianGua(benCode, n3);
@@ -55,7 +56,7 @@ function divineByMeihuaNumbers(rand1, rand2, rand3) {
   let huGua = getGuaDetail(huCode);
   let bianGua = getGuaDetail(bianCode);
 
-  let desc = `本卦为${benGua.name}${benGua.manifest}，动爻为第${n3+1}爻，互卦为${huGua.name}${huGua.manifest}，变卦为${bianGua.name}${bianGua.manifest}`;
+  let desc = `本卦为${benGua.name}${benGua.manifest}，互卦为${huGua.name}${huGua.manifest}，动爻为第${n3}爻，变卦为${bianGua.name}${bianGua.manifest}`;
 
   return {
       benGua: benGua,
