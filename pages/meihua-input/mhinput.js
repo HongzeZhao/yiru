@@ -168,7 +168,7 @@ Page({
         let encodedData = encodeURIComponent(JSON.stringify(data));
         if (wx.getStorageSync('meihua.agree') === true) {
             wx.navigateTo({
-                url: `/pages/meihua/meihua?data=${this.data.encodedData}`,
+                url: `/pages/meihua/meihua?data=${encodedData}`,
             });
         } else {
             this.setData({

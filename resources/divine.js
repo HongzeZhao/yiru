@@ -6,9 +6,10 @@ let gua_codes = [
   "111", "110", "101", "100", "011", "010", "001", "000"
 ]
 
+// code: （从左到右表示由下到上）
 function getHuGua(code) {
-  // 互卦：第二三爻与四五爻整体互换
-    return code[0] + code[3] + code[4] + code[1] + code[2] + code[5];
+  // 互卦：将主卦的初爻与上爻去掉，以中间四爻的上三爻为上卦，下三爻为下卦
+    return code[1] + code[2] + code[3] + code[2] + code[3] + code[4];
 }
 
 function getBianGua(code, i) {
