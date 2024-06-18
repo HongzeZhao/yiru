@@ -1,0 +1,92 @@
+<!--pages/meihua-input/minput.wxml-->
+<scroll-view class="scrollarea" scroll-y type="list">
+<view class="container">
+<view class="table-container" hidden="{{!lunarValid}}">
+    <view class="table-row table-head">
+        <view class="table-cell">{{yearText}}</view>
+        <view class="table-cell">{{monthText}}</view>
+        <view class="table-cell">{{dayText}}</view>
+        <view class="table-cell">{{hourText}}</view>
+    </view>
+    <view class="table-row">
+        <view class="table-cell">星期{{week}}</view>
+        <view class="table-cell">{{xiu}}</view>
+        <view class="table-cell">{{yuexiang}}</view>
+    </view>
+    <view class="table-row">
+        <view class="table-cell">{{bazi.year}}</view>
+        <view class="table-cell">{{bazi.month}}</view>
+        <view class="table-cell">{{bazi.day}}</view>
+        <view class="table-cell">{{bazi.time}}</view>
+    </view>
+    <view class="table-row">
+        <view class="table-cell">{{bazi.yearNaYin}}</view>
+        <view class="table-cell">{{bazi.monthNaYin}}</view>
+        <view class="table-cell">{{bazi.dayNaYin}}</view>
+        <view class="table-cell">{{bazi.timeNaYin}}</view>
+    </view>
+    <view class="table-row">
+        <view class="table-cell">{{bazi.yearWuxing}}</view>
+        <view class="table-cell">{{bazi.monthWuxing}}</view>
+        <view class="table-cell">{{bazi.dayWuxing}}</view>
+        <view class="table-cell">{{bazi.timeWuxing}}</view>
+    </view>
+    <view class="table-row">
+        <view class="table-cell">年太岁{{taisui.year}}</view>
+        <view class="table-cell">月太岁{{taisui.month}}</view>
+        <view class="table-cell">日太岁{{taisui.day}}</view>
+    </view>
+</view>
+<view class="input-tips">
+    <text>我们不采集隐私喔，但是告诉你的生日和性别之后才能猜得准！</text>
+  </view>
+  <view class="form-group">
+    <text class="label">出生日期：</text>
+    <picker mode="date" value="{{date}}" start="1900-01-01" end="2023-12-31" bindchange="bindDateChange">
+      <view class="picker {{dateValid ? '' : 'error-state'}}">
+        {{date}}
+      </view>
+    </picker>
+    <text hidden="{{dateValid}}" class="valid-check-tips">请输入</text>
+  </view>
+  <view class="form-group">
+    <text class="label">出生时间：</text>
+    <picker mode="time" value="{{hour}}" bindchange="bindHourChange">
+      <view class="picker {{hourValid ? '' : 'error-state'}}">
+        {{hour}}
+      </view>
+    </picker>
+    <text hidden="{{hourValid}}" class="valid-check-tips">请输入</text>
+  </view>
+  <view class="form-group">
+    <text class="label">性别：</text>
+    <picker mode="selector" range="{{genderRange}}" bindchange="bindGenderChange">
+      <view class="picker {{genderValid ? '' : 'error-state'}}">
+        {{gender}}
+      </view>
+    </picker>
+    <text hidden="{{genderValid}}" class="valid-check-tips">请输入</text>
+  </view>
+  <view class="divine" bind:tap="ondivineTapped">
+        <image src="../../resources/img/brain.png" class="turtle"></image>
+        <view class="divine-text">问问大模型！</view>
+    </view>
+</view>
+<!-- 弹窗结构 -->
+<view class="modal-container" wx:if="{{showModal}}">
+  <view class="modal-content">
+    <scroll-view class="modal-scroll-view" scroll-y="true">
+      <!-- 这里放置你的弹窗内容 -->
+      <view>
+        <text class="model-text-head">免责声明</text>
+      </view>
+      <view>
+      <text class="model-text">{{agreements}}</text>
+    </view>
+    </scroll-view>
+    <button bindtap="onRefuse" class="modal-button">拒绝</button>
+    <button bindtap="onAgree" class="modal-button">同意</button>
+  </view>
+</view>
+
+</scroll-view>

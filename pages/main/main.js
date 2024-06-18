@@ -1,5 +1,6 @@
 // pages/main.js
-const {Solar, Lunar} = require('../../resources/lunar')
+const {Solar, Lunar} = require('lunar-javascript');
+
 // 引入插件安装器
 import plugin from '../../component/calendar-v2/plugins/index'
 

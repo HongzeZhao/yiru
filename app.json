@@ -3,6 +3,7 @@
     "pages/main/main",
     "pages/meihua/meihua",
     "pages/meihua-input/mhinput",
+    "pages/ziwei-input/zwinput",
     "pages/talk/talk"
   ],
   "window": {

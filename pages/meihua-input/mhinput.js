@@ -1,7 +1,8 @@
 // pages/meihua-input/mhinput.js
 
 // https://6tail.cn/calendar/api.html
-const {Solar, Lunar} = require('../../resources/lunar')
+const {Solar, Lunar} = require('lunar-javascript');
+const {getAgreements} = require('../../resources/agreements');
 
 Page({
 
@@ -22,7 +23,8 @@ Page({
     hourValid: true,
     genderValid: true,
     numberValid: true,
-    lunarValid: false
+    lunarValid: false,
+    agreements: getAgreements()
   },
 
   onGenRandomTapped(e) {
