@@ -62,7 +62,7 @@ page {
   margin-left: 30px;
   margin-right: 30px;
   font-size: 12px;
-  color: #282828;
+  color: darkblue;
 }
 
 .yao-area .yaoi {
@@ -87,7 +87,7 @@ page {
 .model-explain {
   padding: 10px;
   font-size: 14px;
-  color: #076d69;
+  color: rgb(218, 37, 97);
 }
 
 .loading-img {
@@ -98,13 +98,13 @@ page {
 .loading-area {
     text-align: center;
     font-size: 12px;
-    color: #0abab5;
+    color: rgb(218, 37, 97);
 }
 
 .safety-tips {
     font-size: 10px;
     color: white;
-    background-color: #0abab5;
+    background-color: darkred;
     border-radius: 5px;
     padding: 2px 10px 2px 10px
 }

@@ -47,7 +47,7 @@
 
     <view class="loading-area" hidden="{{!loadingModel}}">
         <view>
-            <image class="loading-img" src="../../resources/img/loading.gif"></image>
+            <image class="loading-img" src="../../resources/img/loading6.gif"></image>
         </view>
         <view>
             <text> 正在加载大模型解读... </text>

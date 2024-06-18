@@ -4,7 +4,7 @@ var __DEFINE__ = function(modId, func, req) { var m = { exports: {}, _tempexport
 var __REQUIRE__ = function(modId, source) { if(!__MODS__[modId]) return require(source); if(!__MODS__[modId].status) { var m = __MODS__[modId].m; m._exports = m._tempexports; var desp = Object.getOwnPropertyDescriptor(m, "exports"); if (desp && desp.configurable) Object.defineProperty(m, "exports", { set: function (val) { if(typeof val === "object" && val !== m._exports) { m._exports.__proto__ = val.__proto__; Object.keys(val).forEach(function (k) { m._exports[k] = val[k]; }); } m._tempexports = val }, get: function () { return m._tempexports; } }); __MODS__[modId].status = 1; __MODS__[modId].func(__MODS__[modId].req, m, m.exports); } return __MODS__[modId].m.exports; };
 var __REQUIRE_WILDCARD__ = function(obj) { if(obj && obj.__esModule) { return obj; } else { var newObj = {}; if(obj != null) { for(var k in obj) { if (Object.prototype.hasOwnProperty.call(obj, k)) newObj[k] = obj[k]; } } newObj.default = obj; return newObj; } };
 var __REQUIRE_DEFAULT__ = function(obj) { return obj && obj.__esModule ? obj.default : obj; };
-__DEFINE__(1718710892496, function(require, module, exports) {
+__DEFINE__(1718377418377, function(require, module, exports) {
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
@@ -36,8 +36,8 @@ exports.star = __importStar(require("./star"));
 exports.util = __importStar(require("./utils"));
 exports.astro = __importStar(require("./astro"));
 
-}, function(modId) {var map = {"./data":1718710892497,"./star":1718710892502,"./utils":1718710892576,"./astro":1718710892504}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892497, function(require, module, exports) {
+}, function(modId) {var map = {"./data":1718377418378,"./star":1718377418383,"./utils":1718377418457,"./astro":1718377418385}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1718377418378, function(require, module, exports) {
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
@@ -59,8 +59,8 @@ __exportStar(require("./stars"), exports);
 __exportStar(require("./heavenlyStems"), exports);
 __exportStar(require("./earthlyBranches"), exports);
 
-}, function(modId) { var map = {"./constants":1718710892498,"./stars":1718710892499,"./heavenlyStems":1718710892500,"./earthlyBranches":1718710892501}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892498, function(require, module, exports) {
+}, function(modId) { var map = {"./constants":1718377418379,"./stars":1718377418380,"./heavenlyStems":1718377418381,"./earthlyBranches":1718377418382}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1718377418379, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.RAT_RULE = exports.TIGER_RULE = exports.TIME_RANGE = exports.CHINESE_TIME = exports.FiveElementsClass = exports.GENDER = exports.PALACES = exports.ZODIAC = exports.EARTHLY_BRANCHES = exports.HEAVENLY_STEMS = exports.LANGUAGES = void 0;
@@ -233,7 +233,7 @@ exports.RAT_RULE = {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892499, function(require, module, exports) {
+__DEFINE__(1718377418380, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.STARS_INFO = exports.MUTAGEN = void 0;
@@ -338,7 +338,7 @@ exports.STARS_INFO = {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892500, function(require, module, exports) {
+__DEFINE__(1718377418381, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.heavenlyStems = void 0;
@@ -429,7 +429,7 @@ exports.heavenlyStems = {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892501, function(require, module, exports) {
+__DEFINE__(1718377418382, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.earthlyBranches = void 0;
@@ -577,7 +577,7 @@ exports.earthlyBranches = {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892502, function(require, module, exports) {
+__DEFINE__(1718377418383, function(require, module, exports) {
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
@@ -604,8 +604,8 @@ __exportStar(require("./adjectiveStar"), exports);
 __exportStar(require("./decorativeStar"), exports);
 __exportStar(require("./horoscopeStar"), exports);
 
-}, function(modId) { var map = {"./location":1718710892503,"./majorStar":1718710892583,"./minorStar":1718710892585,"./adjectiveStar":1718710892586,"./decorativeStar":1718710892587,"./horoscopeStar":1718710892588}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892503, function(require, module, exports) {
+}, function(modId) { var map = {"./location":1718377418384,"./majorStar":1718377418464,"./minorStar":1718377418466,"./adjectiveStar":1718377418467,"./decorativeStar":1718377418468,"./horoscopeStar":1718377418469}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1718377418384, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getChangQuIndexByHeavenlyStem = exports.getMonthlyStarIndex = exports.getNianjieIndex = exports.getYearlyStarIndex = exports.getGuGuaIndex = exports.getHuagaiXianchiIndex = exports.getLuanXiIndex = exports.getHuoLingIndex = exports.getKongJieIndex = exports.getTimelyStarIndex = exports.getDailyStarIndex = exports.getChangQuIndex = exports.getZuoYouIndex = exports.getKuiYueIndex = exports.getLuYangTuoMaIndex = exports.getStartIndex = void 0;
@@ -1299,8 +1299,8 @@ var getChangQuIndexByHeavenlyStem = function (heavenlyStemName) {
 };
 exports.getChangQuIndexByHeavenlyStem = getChangQuIndexByHeavenlyStem;
 
-}, function(modId) { var map = {"../astro":1718710892504,"../data":1718710892497,"../i18n":1718710892506,"../utils":1718710892576}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892504, function(require, module, exports) {
+}, function(modId) { var map = {"../astro":1718377418385,"../data":1718377418378,"../i18n":1718377418387,"../utils":1718377418457}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1718377418385, function(require, module, exports) {
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
@@ -1320,8 +1320,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./palace"), exports);
 __exportStar(require("./astro"), exports);
 
-}, function(modId) { var map = {"./palace":1718710892505,"./astro":1718710892577}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892505, function(require, module, exports) {
+}, function(modId) { var map = {"./palace":1718377418386,"./astro":1718377418458}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1718377418386, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getHoroscope = exports.getPalaceNames = exports.getFiveElementsClass = exports.getSoulAndBody = void 0;
@@ -1500,8 +1500,8 @@ var getHoroscope = function (solarDateStr, timeIndex, gender, fixLeap) {
 };
 exports.getHoroscope = getHoroscope;
 
-}, function(modId) { var map = {"../data":1718710892497,"../i18n":1718710892506,"../utils":1718710892576,"./astro":1718710892577}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892506, function(require, module, exports) {
+}, function(modId) { var map = {"../data":1718377418378,"../i18n":1718377418387,"../utils":1718377418457,"./astro":1718377418458}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1718377418387, function(require, module, exports) {
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
@@ -1601,8 +1601,8 @@ exports.kot = kot;
 __exportStar(require("./types"), exports);
 exports.default = i18next_1.default;
 
-}, function(modId) { var map = {"./locales/zh-CN":1718710892507,"./locales/zh-TW":1718710892517,"./locales/ko-KR":1718710892527,"./locales/ja-JP":1718710892537,"./locales/en-US":1718710892547,"./locales/vi-VN":1718710892557,"./types":1718710892567}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892507, function(require, module, exports) {
+}, function(modId) { var map = {"./locales/zh-CN":1718377418388,"./locales/zh-TW":1718377418398,"./locales/ko-KR":1718377418408,"./locales/ja-JP":1718377418418,"./locales/en-US":1718377418428,"./locales/vi-VN":1718377418438,"./types":1718377418448}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1718377418388, function(require, module, exports) {
 
 var __assign = (this && this.__assign) || function () {
     __assign = Object.assign || function(t) {
@@ -1630,8 +1630,8 @@ var palace_1 = __importDefault(require("./palace"));
 var star_1 = __importDefault(require("./star"));
 exports.default = __assign(__assign(__assign(__assign(__assign(__assign(__assign(__assign(__assign({}, common_json_1.default), fiveElementsClass_1.default), heavenlyStem_1.default), earthlyBranch_1.default), brightness_1.default), mutagen_1.default), star_1.default), palace_1.default), gender_1.default);
 
-}, function(modId) { var map = {"./common.json":1718710892508,"./brightness":1718710892509,"./earthlyBranch":1718710892510,"./fiveElementsClass":1718710892511,"./gender":1718710892512,"./heavenlyStem":1718710892513,"./mutagen":1718710892514,"./palace":1718710892515,"./star":1718710892516}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892508, function(require, module, exports) {
+}, function(modId) { var map = {"./common.json":1718377418389,"./brightness":1718377418390,"./earthlyBranch":1718377418391,"./fiveElementsClass":1718377418392,"./gender":1718377418393,"./heavenlyStem":1718377418394,"./mutagen":1718377418395,"./palace":1718377418396,"./star":1718377418397}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1718377418389, function(require, module, exports) {
 module.exports = {
     "decadal": "大限",
     "childhood": "童限",
@@ -1680,7 +1680,7 @@ module.exports = {
 }
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892509, function(require, module, exports) {
+__DEFINE__(1718377418390, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
@@ -1694,7 +1694,7 @@ exports.default = {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892510, function(require, module, exports) {
+__DEFINE__(1718377418391, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
@@ -1713,7 +1713,7 @@ exports.default = {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892511, function(require, module, exports) {
+__DEFINE__(1718377418392, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
@@ -1725,7 +1725,7 @@ exports.default = {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892512, function(require, module, exports) {
+__DEFINE__(1718377418393, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
@@ -1734,7 +1734,7 @@ exports.default = {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892513, function(require, module, exports) {
+__DEFINE__(1718377418394, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
@@ -1751,7 +1751,7 @@ exports.default = {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892514, function(require, module, exports) {
+__DEFINE__(1718377418395, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
@@ -1762,7 +1762,7 @@ exports.default = {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892515, function(require, module, exports) {
+__DEFINE__(1718377418396, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
@@ -1783,7 +1783,7 @@ exports.default = {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892516, function(require, module, exports) {
+__DEFINE__(1718377418397, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
@@ -1920,7 +1920,7 @@ exports.default = {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892517, function(require, module, exports) {
+__DEFINE__(1718377418398, function(require, module, exports) {
 
 var __assign = (this && this.__assign) || function () {
     __assign = Object.assign || function(t) {
@@ -1948,8 +1948,8 @@ var palace_1 = __importDefault(require("./palace"));
 var star_1 = __importDefault(require("./star"));
 exports.default = __assign(__assign(__assign(__assign(__assign(__assign(__assign(__assign(__assign({}, common_json_1.default), fiveElementsClass_1.default), heavenlyStem_1.default), earthlyBranch_1.default), brightness_1.default), mutagen_1.default), star_1.default), palace_1.default), gender_1.default);
 
-}, function(modId) { var map = {"./common.json":1718710892518,"./brightness":1718710892519,"./earthlyBranch":1718710892520,"./fiveElementsClass":1718710892521,"./gender":1718710892522,"./heavenlyStem":1718710892523,"./mutagen":1718710892524,"./palace":1718710892525,"./star":1718710892526}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892518, function(require, module, exports) {
+}, function(modId) { var map = {"./common.json":1718377418399,"./brightness":1718377418400,"./earthlyBranch":1718377418401,"./fiveElementsClass":1718377418402,"./gender":1718377418403,"./heavenlyStem":1718377418404,"./mutagen":1718377418405,"./palace":1718377418406,"./star":1718377418407}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1718377418399, function(require, module, exports) {
 module.exports = {
     "decadal": "大限",
     "childhood": "童限",
@@ -1998,7 +1998,7 @@ module.exports = {
 }
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892519, function(require, module, exports) {
+__DEFINE__(1718377418400, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
@@ -2012,7 +2012,7 @@ exports.default = {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892520, function(require, module, exports) {
+__DEFINE__(1718377418401, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
@@ -2031,7 +2031,7 @@ exports.default = {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892521, function(require, module, exports) {
+__DEFINE__(1718377418402, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
@@ -2043,7 +2043,7 @@ exports.default = {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892522, function(require, module, exports) {
+__DEFINE__(1718377418403, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
@@ -2052,7 +2052,7 @@ exports.default = {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892523, function(require, module, exports) {
+__DEFINE__(1718377418404, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
@@ -2069,7 +2069,7 @@ exports.default = {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892524, function(require, module, exports) {
+__DEFINE__(1718377418405, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
@@ -2080,7 +2080,7 @@ exports.default = {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892525, function(require, module, exports) {
+__DEFINE__(1718377418406, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
@@ -2101,7 +2101,7 @@ exports.default = {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892526, function(require, module, exports) {
+__DEFINE__(1718377418407, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
@@ -2238,7 +2238,7 @@ exports.default = {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892527, function(require, module, exports) {
+__DEFINE__(1718377418408, function(require, module, exports) {
 
 var __assign = (this && this.__assign) || function () {
     __assign = Object.assign || function(t) {
@@ -2266,8 +2266,8 @@ var palace_1 = __importDefault(require("./palace"));
 var star_1 = __importDefault(require("./star"));
 exports.default = __assign(__assign(__assign(__assign(__assign(__assign(__assign(__assign(__assign({}, common_json_1.default), fiveElementsClass_1.default), heavenlyStem_1.default), earthlyBranch_1.default), brightness_1.default), mutagen_1.default), star_1.default), palace_1.default), gender_1.default);
 
-}, function(modId) { var map = {"./common.json":1718710892528,"./brightness":1718710892529,"./earthlyBranch":1718710892530,"./fiveElementsClass":1718710892531,"./gender":1718710892532,"./heavenlyStem":1718710892533,"./mutagen":1718710892534,"./palace":1718710892535,"./star":1718710892536}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892528, function(require, module, exports) {
+}, function(modId) { var map = {"./common.json":1718377418409,"./brightness":1718377418410,"./earthlyBranch":1718377418411,"./fiveElementsClass":1718377418412,"./gender":1718377418413,"./heavenlyStem":1718377418414,"./mutagen":1718377418415,"./palace":1718377418416,"./star":1718377418417}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1718377418409, function(require, module, exports) {
 module.exports = {
     "decadal": "대한",
     "childhood": "어린",
@@ -2316,7 +2316,7 @@ module.exports = {
 }
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892529, function(require, module, exports) {
+__DEFINE__(1718377418410, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
@@ -2330,7 +2330,7 @@ exports.default = {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892530, function(require, module, exports) {
+__DEFINE__(1718377418411, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
@@ -2349,7 +2349,7 @@ exports.default = {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892531, function(require, module, exports) {
+__DEFINE__(1718377418412, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
@@ -2361,7 +2361,7 @@ exports.default = {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892532, function(require, module, exports) {
+__DEFINE__(1718377418413, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
@@ -2370,7 +2370,7 @@ exports.default = {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892533, function(require, module, exports) {
+__DEFINE__(1718377418414, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
@@ -2387,7 +2387,7 @@ exports.default = {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892534, function(require, module, exports) {
+__DEFINE__(1718377418415, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
@@ -2398,7 +2398,7 @@ exports.default = {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892535, function(require, module, exports) {
+__DEFINE__(1718377418416, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
@@ -2419,7 +2419,7 @@ exports.default = {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892536, function(require, module, exports) {
+__DEFINE__(1718377418417, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
@@ -2556,7 +2556,7 @@ exports.default = {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892537, function(require, module, exports) {
+__DEFINE__(1718377418418, function(require, module, exports) {
 
 var __assign = (this && this.__assign) || function () {
     __assign = Object.assign || function(t) {
@@ -2584,8 +2584,8 @@ var palace_1 = __importDefault(require("./palace"));
 var star_1 = __importDefault(require("./star"));
 exports.default = __assign(__assign(__assign(__assign(__assign(__assign(__assign(__assign(__assign({}, common_json_1.default), fiveElementsClass_1.default), heavenlyStem_1.default), earthlyBranch_1.default), brightness_1.default), mutagen_1.default), star_1.default), palace_1.default), gender_1.default);
 
-}, function(modId) { var map = {"./common.json":1718710892538,"./brightness":1718710892539,"./earthlyBranch":1718710892540,"./fiveElementsClass":1718710892541,"./gender":1718710892542,"./heavenlyStem":1718710892543,"./mutagen":1718710892544,"./palace":1718710892545,"./star":1718710892546}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892538, function(require, module, exports) {
+}, function(modId) { var map = {"./common.json":1718377418419,"./brightness":1718377418420,"./earthlyBranch":1718377418421,"./fiveElementsClass":1718377418422,"./gender":1718377418423,"./heavenlyStem":1718377418424,"./mutagen":1718377418425,"./palace":1718377418426,"./star":1718377418427}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1718377418419, function(require, module, exports) {
 module.exports = {
     "decadal": "大限",
     "childhood": "子供",
@@ -2634,7 +2634,7 @@ module.exports = {
 }
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892539, function(require, module, exports) {
+__DEFINE__(1718377418420, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
@@ -2648,7 +2648,7 @@ exports.default = {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892540, function(require, module, exports) {
+__DEFINE__(1718377418421, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
@@ -2667,7 +2667,7 @@ exports.default = {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892541, function(require, module, exports) {
+__DEFINE__(1718377418422, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
@@ -2679,7 +2679,7 @@ exports.default = {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892542, function(require, module, exports) {
+__DEFINE__(1718377418423, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
@@ -2688,7 +2688,7 @@ exports.default = {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892543, function(require, module, exports) {
+__DEFINE__(1718377418424, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
@@ -2705,7 +2705,7 @@ exports.default = {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892544, function(require, module, exports) {
+__DEFINE__(1718377418425, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
@@ -2716,7 +2716,7 @@ exports.default = {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892545, function(require, module, exports) {
+__DEFINE__(1718377418426, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
@@ -2737,7 +2737,7 @@ exports.default = {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892546, function(require, module, exports) {
+__DEFINE__(1718377418427, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
@@ -2874,7 +2874,7 @@ exports.default = {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892547, function(require, module, exports) {
+__DEFINE__(1718377418428, function(require, module, exports) {
 
 var __assign = (this && this.__assign) || function () {
     __assign = Object.assign || function(t) {
@@ -2902,8 +2902,8 @@ var palace_1 = __importDefault(require("./palace"));
 var star_1 = __importDefault(require("./star"));
 exports.default = __assign(__assign(__assign(__assign(__assign(__assign(__assign(__assign(__assign({}, common_json_1.default), fiveElementsClass_1.default), heavenlyStem_1.default), earthlyBranch_1.default), brightness_1.default), mutagen_1.default), star_1.default), palace_1.default), gender_1.default);
 
-}, function(modId) { var map = {"./common.json":1718710892548,"./brightness":1718710892549,"./earthlyBranch":1718710892550,"./fiveElementsClass":1718710892551,"./gender":1718710892552,"./heavenlyStem":1718710892553,"./mutagen":1718710892554,"./palace":1718710892555,"./star":1718710892556}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892548, function(require, module, exports) {
+}, function(modId) { var map = {"./common.json":1718377418429,"./brightness":1718377418430,"./earthlyBranch":1718377418431,"./fiveElementsClass":1718377418432,"./gender":1718377418433,"./heavenlyStem":1718377418434,"./mutagen":1718377418435,"./palace":1718377418436,"./star":1718377418437}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1718377418429, function(require, module, exports) {
 module.exports = {
     "decadal": "decadal",
     "yearly": "yearly",
@@ -2951,7 +2951,7 @@ module.exports = {
 }
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892549, function(require, module, exports) {
+__DEFINE__(1718377418430, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
@@ -2965,7 +2965,7 @@ exports.default = {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892550, function(require, module, exports) {
+__DEFINE__(1718377418431, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
@@ -2984,7 +2984,7 @@ exports.default = {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892551, function(require, module, exports) {
+__DEFINE__(1718377418432, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
@@ -2996,7 +2996,7 @@ exports.default = {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892552, function(require, module, exports) {
+__DEFINE__(1718377418433, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
@@ -3005,7 +3005,7 @@ exports.default = {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892553, function(require, module, exports) {
+__DEFINE__(1718377418434, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
@@ -3022,7 +3022,7 @@ exports.default = {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892554, function(require, module, exports) {
+__DEFINE__(1718377418435, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
@@ -3033,7 +3033,7 @@ exports.default = {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892555, function(require, module, exports) {
+__DEFINE__(1718377418436, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
@@ -3054,7 +3054,7 @@ exports.default = {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892556, function(require, module, exports) {
+__DEFINE__(1718377418437, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
@@ -3191,7 +3191,7 @@ exports.default = {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892557, function(require, module, exports) {
+__DEFINE__(1718377418438, function(require, module, exports) {
 
 var __assign = (this && this.__assign) || function () {
     __assign = Object.assign || function(t) {
@@ -3219,8 +3219,8 @@ var palace_1 = __importDefault(require("./palace"));
 var star_1 = __importDefault(require("./star"));
 exports.default = __assign(__assign(__assign(__assign(__assign(__assign(__assign(__assign(__assign({}, common_json_1.default), fiveElementsClass_1.default), heavenlyStem_1.default), earthlyBranch_1.default), brightness_1.default), mutagen_1.default), star_1.default), palace_1.default), gender_1.default);
 
-}, function(modId) { var map = {"./common.json":1718710892558,"./brightness":1718710892559,"./earthlyBranch":1718710892560,"./fiveElementsClass":1718710892561,"./gender":1718710892562,"./heavenlyStem":1718710892563,"./mutagen":1718710892564,"./palace":1718710892565,"./star":1718710892566}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892558, function(require, module, exports) {
+}, function(modId) { var map = {"./common.json":1718377418439,"./brightness":1718377418440,"./earthlyBranch":1718377418441,"./fiveElementsClass":1718377418442,"./gender":1718377418443,"./heavenlyStem":1718377418444,"./mutagen":1718377418445,"./palace":1718377418446,"./star":1718377418447}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1718377418439, function(require, module, exports) {
 module.exports = {
     "decadal": "Đại Hạn",
     "childhood": "đứa trẻ Hạn",
@@ -3269,7 +3269,7 @@ module.exports = {
 }
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892559, function(require, module, exports) {
+__DEFINE__(1718377418440, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
@@ -3283,7 +3283,7 @@ exports.default = {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892560, function(require, module, exports) {
+__DEFINE__(1718377418441, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
@@ -3302,7 +3302,7 @@ exports.default = {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892561, function(require, module, exports) {
+__DEFINE__(1718377418442, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
@@ -3314,7 +3314,7 @@ exports.default = {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892562, function(require, module, exports) {
+__DEFINE__(1718377418443, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
@@ -3323,7 +3323,7 @@ exports.default = {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892563, function(require, module, exports) {
+__DEFINE__(1718377418444, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
@@ -3340,7 +3340,7 @@ exports.default = {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892564, function(require, module, exports) {
+__DEFINE__(1718377418445, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
@@ -3351,7 +3351,7 @@ exports.default = {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892565, function(require, module, exports) {
+__DEFINE__(1718377418446, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
@@ -3372,7 +3372,7 @@ exports.default = {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892566, function(require, module, exports) {
+__DEFINE__(1718377418447, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
@@ -3509,7 +3509,7 @@ exports.default = {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892567, function(require, module, exports) {
+__DEFINE__(1718377418448, function(require, module, exports) {
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
@@ -3535,48 +3535,48 @@ __exportStar(require("./Palace"), exports);
 __exportStar(require("./Star"), exports);
 __exportStar(require("./mutagen"), exports);
 
-}, function(modId) { var map = {"./Brightness":1718710892568,"./EarthlyBranch":1718710892569,"./FiveElementsClass":1718710892570,"./Gender":1718710892571,"./HeavenlyStem":1718710892572,"./Palace":1718710892573,"./Star":1718710892574,"./mutagen":1718710892575}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892568, function(require, module, exports) {
+}, function(modId) { var map = {"./Brightness":1718377418449,"./EarthlyBranch":1718377418450,"./FiveElementsClass":1718377418451,"./Gender":1718377418452,"./HeavenlyStem":1718377418453,"./Palace":1718377418454,"./Star":1718377418455,"./mutagen":1718377418456}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1718377418449, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892569, function(require, module, exports) {
+__DEFINE__(1718377418450, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892570, function(require, module, exports) {
+__DEFINE__(1718377418451, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892571, function(require, module, exports) {
+__DEFINE__(1718377418452, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892572, function(require, module, exports) {
+__DEFINE__(1718377418453, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892573, function(require, module, exports) {
+__DEFINE__(1718377418454, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892574, function(require, module, exports) {
+__DEFINE__(1718377418455, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892575, function(require, module, exports) {
+__DEFINE__(1718377418456, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892576, function(require, module, exports) {
+__DEFINE__(1718377418457, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.translateChineseDate = exports.getAgeIndex = exports.timeToIndex = exports.mergeStars = exports.fixLunarDayIndex = exports.fixLunarMonthIndex = exports.fixEarthlyBranchIndex = exports.getMutagensByHeavenlyStem = exports.getMutagen = exports.getBrightness = exports.earthlyBranchIndexToPalaceIndex = exports.fixIndex = void 0;
@@ -3787,8 +3787,8 @@ var translateChineseDate = function (chineseDate) {
 };
 exports.translateChineseDate = translateChineseDate;
 
-}, function(modId) { var map = {"../data":1718710892497,"../star":1718710892502,"../i18n":1718710892506,"../astro":1718710892504}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892577, function(require, module, exports) {
+}, function(modId) { var map = {"../data":1718377418378,"../star":1718377418383,"../i18n":1718377418387,"../astro":1718377418385}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1718377418458, function(require, module, exports) {
 
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
@@ -4122,8 +4122,8 @@ var getMajorStarByLunarDate = function (lunarDateStr, timeIndex, isLeapMonth, fi
 };
 exports.getMajorStarByLunarDate = getMajorStarByLunarDate;
 
-}, function(modId) { var map = {"../data":1718710892497,"../i18n":1718710892506,"../star":1718710892502,"../utils":1718710892576,"./FunctionalAstrolabe":1718710892578,"./FunctionalPalace":1718710892582,"./palace":1718710892505}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892578, function(require, module, exports) {
+}, function(modId) { var map = {"../data":1718377418378,"../i18n":1718377418387,"../star":1718377418383,"../utils":1718377418457,"./FunctionalAstrolabe":1718377418459,"./FunctionalPalace":1718377418463,"./palace":1718377418386}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1718377418459, function(require, module, exports) {
 
 var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
     if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
@@ -4403,8 +4403,8 @@ var FunctionalAstrolabe = /** @class */ (function () {
 }());
 exports.default = FunctionalAstrolabe;
 
-}, function(modId) { var map = {"../data":1718710892497,"../i18n":1718710892506,"../star":1718710892502,"../utils":1718710892576,"./analyzer":1718710892579,"./palace":1718710892505,"./FunctionalHoroscope":1718710892581,"./astro":1718710892577}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892579, function(require, module, exports) {
+}, function(modId) { var map = {"../data":1718377418378,"../i18n":1718377418387,"../star":1718377418383,"../utils":1718377418457,"./analyzer":1718377418460,"./palace":1718377418386,"./FunctionalHoroscope":1718377418462,"./astro":1718377418458}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1718377418460, function(require, module, exports) {
 
 var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
     if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
@@ -4640,8 +4640,8 @@ var mutagensToStars = function (heavenlyStem, mutagens) {
 };
 exports.mutagensToStars = mutagensToStars;
 
-}, function(modId) { var map = {"../data":1718710892497,"../i18n":1718710892506,"../utils":1718710892576,"./FunctionalSurpalaces":1718710892580}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892580, function(require, module, exports) {
+}, function(modId) { var map = {"../data":1718377418378,"../i18n":1718377418387,"../utils":1718377418457,"./FunctionalSurpalaces":1718377418461}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1718377418461, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.FunctionalSurpalaces = void 0;
@@ -4669,8 +4669,8 @@ var FunctionalSurpalaces = /** @class */ (function () {
 }());
 exports.FunctionalSurpalaces = FunctionalSurpalaces;
 
-}, function(modId) { var map = {"./analyzer":1718710892579}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892581, function(require, module, exports) {
+}, function(modId) { var map = {"./analyzer":1718377418460}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1718377418462, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var i18n_1 = require("../i18n");
@@ -4769,8 +4769,8 @@ var FunctionalHoroscope = /** @class */ (function () {
 }());
 exports.default = FunctionalHoroscope;
 
-}, function(modId) { var map = {"../i18n":1718710892506,"../utils":1718710892576,"../data":1718710892497}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892582, function(require, module, exports) {
+}, function(modId) { var map = {"../i18n":1718377418387,"../utils":1718377418457,"../data":1718377418378}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1718377418463, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var analyzer_1 = require("./analyzer");
@@ -4897,8 +4897,8 @@ var FunctionalPalace = /** @class */ (function () {
 }());
 exports.default = FunctionalPalace;
 
-}, function(modId) { var map = {"./analyzer":1718710892579}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892583, function(require, module, exports) {
+}, function(modId) { var map = {"./analyzer":1718377418460}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1718377418464, function(require, module, exports) {
 
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
@@ -4985,8 +4985,8 @@ var getMajorStar = function (solarDateStr, timeIndex, fixLeap) {
 };
 exports.getMajorStar = getMajorStar;
 
-}, function(modId) { var map = {".":1718710892502,"../i18n":1718710892506,"../utils":1718710892576,"./FunctionalStar":1718710892584,"./location":1718710892503,"../astro":1718710892504}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892584, function(require, module, exports) {
+}, function(modId) { var map = {".":1718377418383,"../i18n":1718377418387,"../utils":1718377418457,"./FunctionalStar":1718377418465,"./location":1718377418384,"../astro":1718377418385}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1718377418465, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var i18n_1 = require("../i18n");
@@ -5041,8 +5041,8 @@ var FunctionalStar = /** @class */ (function () {
 }());
 exports.default = FunctionalStar;
 
-}, function(modId) { var map = {"../i18n":1718710892506}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892585, function(require, module, exports) {
+}, function(modId) { var map = {"../i18n":1718377418387}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1718377418466, function(require, module, exports) {
 
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
@@ -5169,8 +5169,8 @@ var getMinorStar = function (solarDateStr, timeIndex, fixLeap) {
 };
 exports.getMinorStar = getMinorStar;
 
-}, function(modId) { var map = {".":1718710892502,"../i18n":1718710892506,"../utils":1718710892576,"./FunctionalStar":1718710892584,"./location":1718710892503,"../astro":1718710892504}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892586, function(require, module, exports) {
+}, function(modId) { var map = {".":1718377418383,"../i18n":1718377418387,"../utils":1718377418457,"./FunctionalStar":1718377418465,"./location":1718377418384,"../astro":1718377418385}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1718377418467, function(require, module, exports) {
 
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
@@ -5242,8 +5242,8 @@ var getAdjectiveStar = function (solarDateStr, timeIndex, fixLeap) {
 };
 exports.getAdjectiveStar = getAdjectiveStar;
 
-}, function(modId) { var map = {".":1718710892502,"../i18n":1718710892506,"./FunctionalStar":1718710892584,"./location":1718710892503,"../astro":1718710892504}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892587, function(require, module, exports) {
+}, function(modId) { var map = {".":1718377418383,"../i18n":1718377418387,"./FunctionalStar":1718377418465,"./location":1718377418384,"../astro":1718377418385}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1718377418468, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getYearly12 = exports.getJiangqian12StartIndex = exports.getBoShi12 = exports.getchangsheng12 = exports.getChangesheng12StartIndex = void 0;
@@ -5478,8 +5478,8 @@ var getYearly12 = function (solarDateStr) {
 };
 exports.getYearly12 = getYearly12;
 
-}, function(modId) { var map = {"../astro":1718710892504,"../data":1718710892497,"../i18n":1718710892506,"../utils":1718710892576,"./location":1718710892503}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892588, function(require, module, exports) {
+}, function(modId) { var map = {"../astro":1718377418385,"../data":1718377418378,"../i18n":1718377418387,"../utils":1718377418457,"./location":1718377418384}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1718377418469, function(require, module, exports) {
 
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
@@ -5534,8 +5534,8 @@ var getHoroscopeStar = function (heavenlyStem, earthlyBranch, scope) {
 };
 exports.getHoroscopeStar = getHoroscopeStar;
 
-}, function(modId) { var map = {".":1718710892502,"../i18n":1718710892506,"./FunctionalStar":1718710892584,"./location":1718710892503}; return __REQUIRE__(map[modId], modId); })
-return __REQUIRE__(1718710892496);
+}, function(modId) { var map = {".":1718377418383,"../i18n":1718377418387,"./FunctionalStar":1718377418465,"./location":1718377418384}; return __REQUIRE__(map[modId], modId); })
+return __REQUIRE__(1718377418377);
 })()
 //miniprogram-npm-outsideDeps=["lunar-lite","i18next","dayjs"]
 //# sourceMappingURL=index.js.map

@@ -1,6 +1,7 @@
 // pages/meihua-input/mhinput.js
 
 const {getAgreements} = require('../../resources/agreements');
+const {Solar} = require('lunar-javascript');
 
 Page({
 
@@ -14,13 +15,9 @@ Page({
     hour: '请选择时间',
     gender: '请选择性别',
     genderRange: ['男', '女'],
-    number1: '',
-    number2: '',
-    number3: '',
     dateValid: true,
     hourValid: true,
     genderValid: true,
-    numberValid: true,
     lunarValid: false,
     agreements: getAgreements()
   },
@@ -50,23 +47,11 @@ Page({
             month: bazi.getMonth() + '(' + lunar.getMonthShengXiao() + ')',
             day: bazi.getDay() + '(' + lunar.getDayShengXiao() + ')',
             time: bazi.getTime() + '(' + lunar.getTimeShengXiao() + ')',
-            yearWuxing: bazi.getYearWuXing(),
-            monthWuxing: bazi.getMonthWuXing(),
-            dayWuxing: bazi.getDayWuXing(),
-            timeWuxing: bazi.getTimeWuXing(),
             yearNaYin: bazi.getYearNaYin(),
             monthNaYin: bazi.getMonthNaYin(),
             dayNaYin: bazi.getDayNaYin(),
             timeNaYin: bazi.getTimeNaYin()
         },
-        taisui: {
-            year: lunar.getYearPositionTaiSuiDesc(),
-            month: lunar.getMonthPositionTaiSuiDesc(),
-            day: lunar.getDayPositionTaiSuiDesc(),
-        },
-        week: lunar.getWeekInChinese(),
-        xiu: lunar.getXiu() + lunar.getAnimal() + lunar.getXiuLuck(),
-        yuexiang: lunar.getYueXiang()
       };
   },
 
@@ -119,14 +104,10 @@ Page({
         genderValid: this.data.gender === '男' || this.data.gender === '女',
     });
     if (this.data.dateValid && this.data.hourValid && this.data.genderValid) {
-        let data = {
-            birthdayData: this.data,
-            gender: this.data.gender
-        };
-        let encodedData = encodeURIComponent(JSON.stringify(data));
+        let encodedData = encodeURIComponent(JSON.stringify(this.data));
         if (wx.getStorageSync('ziwei.agree') === true) {
             wx.navigateTo({
-                url: `/pages/meihua/meihua?data=${encodedData}`,
+                url: `/pages/ziwei/ziwei?data=${encodedData}`,
             });
         } else {
             this.setData({
@@ -144,7 +125,7 @@ Page({
         showModal: false
       });
     wx.navigateTo({
-        url: `/pages/meihua/meihua?data=${this.data.encodedData}`,
+        url: `/pages/ziwei/ziwei?data=${this.data.encodedData}`,
     });
   },
 

@@ -9,11 +9,6 @@
         <view class="table-cell">{{hourText}}</view>
     </view>
     <view class="table-row">
-        <view class="table-cell">星期{{week}}</view>
-        <view class="table-cell">{{xiu}}</view>
-        <view class="table-cell">{{yuexiang}}</view>
-    </view>
-    <view class="table-row">
         <view class="table-cell">{{bazi.year}}</view>
         <view class="table-cell">{{bazi.month}}</view>
         <view class="table-cell">{{bazi.day}}</view>
@@ -25,24 +20,13 @@
         <view class="table-cell">{{bazi.dayNaYin}}</view>
         <view class="table-cell">{{bazi.timeNaYin}}</view>
     </view>
-    <view class="table-row">
-        <view class="table-cell">{{bazi.yearWuxing}}</view>
-        <view class="table-cell">{{bazi.monthWuxing}}</view>
-        <view class="table-cell">{{bazi.dayWuxing}}</view>
-        <view class="table-cell">{{bazi.timeWuxing}}</view>
-    </view>
-    <view class="table-row">
-        <view class="table-cell">年太岁{{taisui.year}}</view>
-        <view class="table-cell">月太岁{{taisui.month}}</view>
-        <view class="table-cell">日太岁{{taisui.day}}</view>
-    </view>
 </view>
 <view class="input-tips">
     <text>我们不采集隐私喔，但是告诉你的生日和性别之后才能猜得准！</text>
   </view>
   <view class="form-group">
     <text class="label">出生日期：</text>
-    <picker mode="date" value="{{date}}" start="1900-01-01" end="2023-12-31" bindchange="bindDateChange">
+    <picker mode="date" value="{{date}}" start="1900-01-01" end="2024-12-31" bindchange="bindDateChange">
       <view class="picker {{dateValid ? '' : 'error-state'}}">
         {{date}}
       </view>
@@ -69,7 +53,7 @@
   </view>
   <view class="divine" bind:tap="ondivineTapped">
         <image src="../../resources/img/brain.png" class="turtle"></image>
-        <view class="divine-text">问问大模型！</view>
+        <view class="divine-text">嘛咪嘛咪哄！</view>
     </view>
 </view>
 <!-- 弹窗结构 -->

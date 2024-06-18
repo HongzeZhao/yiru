@@ -1,5 +1,5 @@
 // pages/main.js
-const {Solar, Lunar} = require('lunar-javascript');
+const {Solar} = require('lunar-javascript');
 
 // 引入插件安装器
 import plugin from '../../component/calendar-v2/plugins/index'
@@ -105,14 +105,14 @@ Page({
 
   onMeihuaClick(e) {
     wx.navigateTo({
-      url: '/pages/meihua-input/mhinput',
+      url: '/pages/ziwei-input/zwinput',
     })
     console.log(e);
   },
 
   onZiweiClick(e) {
     wx.navigateTo({
-      url: '/pages/talk/talk',
+      url: '/pages/meihua-input/mhinput',
     })
     console.log(e);
   },

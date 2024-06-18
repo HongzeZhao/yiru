@@ -4,7 +4,7 @@ var __DEFINE__ = function(modId, func, req) { var m = { exports: {}, _tempexport
 var __REQUIRE__ = function(modId, source) { if(!__MODS__[modId]) return require(source); if(!__MODS__[modId].status) { var m = __MODS__[modId].m; m._exports = m._tempexports; var desp = Object.getOwnPropertyDescriptor(m, "exports"); if (desp && desp.configurable) Object.defineProperty(m, "exports", { set: function (val) { if(typeof val === "object" && val !== m._exports) { m._exports.__proto__ = val.__proto__; Object.keys(val).forEach(function (k) { m._exports[k] = val[k]; }); } m._tempexports = val }, get: function () { return m._tempexports; } }); __MODS__[modId].status = 1; __MODS__[modId].func(__MODS__[modId].req, m, m.exports); } return __MODS__[modId].m.exports; };
 var __REQUIRE_WILDCARD__ = function(obj) { if(obj && obj.__esModule) { return obj; } else { var newObj = {}; if(obj != null) { for(var k in obj) { if (Object.prototype.hasOwnProperty.call(obj, k)) newObj[k] = obj[k]; } } newObj.default = obj; return newObj; } };
 var __REQUIRE_DEFAULT__ = function(obj) { return obj && obj.__esModule ? obj.default : obj; };
-__DEFINE__(1718710892591, function(require, module, exports) {
+__DEFINE__(1718377418472, function(require, module, exports) {
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
@@ -25,12 +25,12 @@ __exportStar(require("./misc"), exports);
 __exportStar(require("./ganzhi"), exports);
 __exportStar(require("./convertor"), exports);
 
-}, function(modId) {var map = {"./misc":1718710892592,"./ganzhi":1718710892595,"./convertor":1718710892594}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892592, function(require, module, exports) {
+}, function(modId) {var map = {"./misc":1718377418473,"./ganzhi":1718377418476,"./convertor":1718377418475}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1718377418473, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getTotalDaysOfLunarMonth = exports.getZodiac = exports.getSign = void 0;
-var lunar_typescript_1 = require("lunar-typescript");
+var lunar_typescript_1 = require("lunar-javascript");
 var constants_1 = require("./constants");
 var convertor_1 = require("./convertor");
 /**
@@ -69,8 +69,8 @@ var getTotalDaysOfLunarMonth = function (solarDateStr) {
 };
 exports.getTotalDaysOfLunarMonth = getTotalDaysOfLunarMonth;
 
-}, function(modId) { var map = {"./constants":1718710892593,"./convertor":1718710892594}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892593, function(require, module, exports) {
+}, function(modId) { var map = {"./constants":1718377418474,"./convertor":1718377418475}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1718377418474, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ZODIAC = exports.EARTHLY_BRANCHES = exports.HEAVENLY_STEMS = void 0;
@@ -123,11 +123,11 @@ exports.ZODIAC = [
 ];
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892594, function(require, module, exports) {
+__DEFINE__(1718377418475, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.lunar2solar = exports.solar2lunar = exports.normalizeDateStr = void 0;
-var lunar_typescript_1 = require("lunar-typescript");
+var lunar_typescript_1 = require("lunar-javascript");
 /**
  * 将日期字符串 YYYY-MM-DD 或者一个 Date 对象分割为 [YYYY, M, D, H, m, s]
  * 当参数为字符串时分割符可以是 `-` `.` 或者 `/`
@@ -214,12 +214,12 @@ var lunar2solar = function (dateStr, isLeapMonth) {
 exports.lunar2solar = lunar2solar;
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1718710892595, function(require, module, exports) {
+__DEFINE__(1718377418476, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getHeavenlyStemAndEarthlyBranchBySolarDate = exports.getHeavenlyStemAndEarthlyBranchByLunarDate = void 0;
 var convertor_1 = require("./convertor");
-var lunar_typescript_1 = require("lunar-typescript");
+var lunar_typescript_1 = require("lunar-javascript");
 /**
  * 通过农历获取生辰干支
  *
@@ -280,8 +280,8 @@ var getHeavenlyStemAndEarthlyBranchBySolarDate = function (dateStr, timeIndex, o
 };
 exports.getHeavenlyStemAndEarthlyBranchBySolarDate = getHeavenlyStemAndEarthlyBranchBySolarDate;
 
-}, function(modId) { var map = {"./convertor":1718710892594}; return __REQUIRE__(map[modId], modId); })
-return __REQUIRE__(1718710892591);
+}, function(modId) { var map = {"./convertor":1718377418475}; return __REQUIRE__(map[modId], modId); })
+return __REQUIRE__(1718377418472);
 })()
-//miniprogram-npm-outsideDeps=["lunar-typescript"]
+//miniprogram-npm-outsideDeps=["lunar-javascript"]
 //# sourceMappingURL=index.js.map

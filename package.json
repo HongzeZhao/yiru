@@ -2,13 +2,13 @@
   "dependencies": {
     "iztro": "^2.4.3",
     "lunar-javascript": "^1.6.12",
+    "lunar-javascript": "^1.7.5",
     "mp-html": "^2.5.0"
   },
   "name": "yiru",
   "version": "1.0.0",
   "description": "易如黄历主要根据当前的时间推测未来事务的发展规律，借助易经相关推演理论（梅花易数、六爻等）推测事情的吉凶。",
   "main": "app.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

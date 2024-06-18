@@ -1,5 +1,4 @@
-// index.js
-const {divineByMeihuaNumbers: divineByMeihuaNumbers} = require("../../resources/divine");
+const { astro } = require("iztro");
 
 Page({
   data: {
@@ -7,12 +6,20 @@ Page({
     loadingModel: true
   },
   onLoad(options) {
-    const data = JSON.parse(decodeURIComponent(options.data));
-    let divined = divineByMeihuaNumbers(data.rand1, data.rand2, data.rand3);
-    this.setData(divined);
+    const parsedData = JSON.parse(decodeURIComponent(options.data));
+    const date = parsedData.date;
+    const gender = parsedData.gender;
+
+    //console.log(data);
+    var astrolabe = astro.bySolar(date, 2, gender);
+    console.log(JSON.stringify(astrolabe));
+
+    this.setData(astrolabe);
     this.setData({
         loadingModel: true
     });
+
+    return;
 
     let that = this;
     wx.request({
@@ -20,9 +27,11 @@ Page({
         method: 'POST',
         data: {
           secret: '911',
-          channel: 'meihua',
-          meihua: divined,
-          nowData: data.nowData
+          channel: 'ziwei',
+          ziwei: {
+              birthday: parsedData,
+              desc: '',
+          },
         },
         header: {
           'content-type': 'application/json' // 默认值

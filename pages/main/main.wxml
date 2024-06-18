@@ -51,11 +51,11 @@
   <view class="button" bindtap="onMeihuaClick">
     <view class="button-background pink-bkg">
       <view>
-        <image class="button-img" src="../../resources/img/ai.png"></image>
+        <image class="button-img" src="../../resources/img/test.png"></image>
       </view>
       <div>
-        <view class="button-text-title text-color-red">AI大模型解读</view>
-        <view class="button-text-desc text-color-red">我是一款基于传统文化智慧的 AI 助手，能够为你解解读每日黄历宜忌，结合中国传统文化为你解读生活的解惑，用科技让你的生活更加顺遂。</view>
+        <view class="button-text-title text-color-red">性格剖析</view>
+        <view class="button-text-desc text-color-red">根据你的生日计算你的星座等信息，从而推测你是个什么样的人，还可给出你生活、事业、爱情等方面的建议。快来试试吧！</view>
       </div>
     </view>
   </view>
@@ -66,9 +66,9 @@
         <image class="button-img" src="../../resources/img/ziwei.png"></image>
       </view>
       <div>
-        <view class="button-text-title text-color-green">易如智慧AI问答</view>
+        <view class="button-text-title text-color-green">猜你所思</view>
         <view class="button-text-desc text-color-green">
-我是"易如"，专注于易经智慧的探索者。穿越千古《易》理，我将繁琐化简，带领你领悟八卦奥秘，六十四卦哲思，每日解锁易经精髓，让古老智慧点亮现代生活。</view>
+穿越千古《易》理，我将繁琐化简，融合人工智能技术，猜猜你的所思所想。</view>
       </div>
     </view>
   </view>
