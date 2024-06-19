@@ -1,4 +1,4 @@
-const { astro } = require("iztro");
+const { getZiweiAstrolabe } = require('../../resources/ziwei_prompt');
 
 Page({
   data: {
@@ -8,18 +8,16 @@ Page({
   onLoad(options) {
     const parsedData = JSON.parse(decodeURIComponent(options.data));
     const date = parsedData.date;
+    const time = parsedData.hour;
     const gender = parsedData.gender;
 
-    //console.log(data);
-    var astrolabe = astro.bySolar(date, 2, gender);
-    console.log(JSON.stringify(astrolabe));
+    const astro = getZiweiAstrolabe(date, time, gender);
+    console.log(astro.desc);
 
-    this.setData(astrolabe);
+    this.setData(astro);
     this.setData({
         loadingModel: true
     });
-
-    return;
 
     let that = this;
     wx.request({
@@ -29,8 +27,10 @@ Page({
           secret: '911',
           channel: 'ziwei',
           ziwei: {
-              birthday: parsedData,
-              desc: '',
+              birthday: date,
+              time: time,
+              gender: gender,
+              desc: astro.desc,
           },
         },
         header: {
