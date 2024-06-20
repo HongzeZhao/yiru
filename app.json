@@ -1,15 +1,12 @@
 {
   "pages": [
     "pages/main/main",
-    "pages/meihua/meihua",
-    "pages/meihua-input/mhinput",
     "pages/ziwei/ziwei",
-    "pages/ziwei-input/zwinput",
-    "pages/talk/talk"
+    "pages/ziwei-input/zwinput"
   ],
   "window": {
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "易如黄历",
+    "navigationBarTitleText": "易如小黄历",
     "navigationBarBackgroundColor": "#ffffff"
   },
   "style": "v2",

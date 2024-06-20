@@ -103,14 +103,14 @@ Page({
     }
   },
 
-  onMeihuaClick(e) {
+  onZiweiClick(e) {
     wx.navigateTo({
       url: '/pages/ziwei-input/zwinput',
     })
     console.log(e);
   },
 
-  onZiweiClick(e) {
+  onMeihuaClick(e) {
     wx.navigateTo({
       url: '/pages/meihua-input/mhinput',
     })

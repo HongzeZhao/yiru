@@ -38,6 +38,7 @@
             <text class="label-yiji label-color-red">忌</text> 
             <text class="yiji-text">{{dayJi}}</text>
         </view>
+        <!--
         <view class="table-row-yiji">
             <text class="label-yiji label-color-golden">太岁</text>
             <text class="yiji-text">{{taisui.year}}[年] {{taisui.month}}[月] {{taisui.day}}[日]</text>
@@ -46,9 +47,10 @@
             <text class="label-yiji label-color-blue">冲煞</text>
             <text class="yiji-text">{{chongsha.day}}[日] {{chongsha.time}}[时]</text>
         </view>
+        -->
     </view>
 </view>
-  <view class="button" bindtap="onMeihuaClick">
+  <view class="button" bindtap="onZiweiClick">
     <view class="button-background pink-bkg">
       <view>
         <image class="button-img" src="../../resources/img/test.png"></image>
@@ -60,7 +62,8 @@
     </view>
   </view>
 
-  <view class="button" bindtap="onZiweiClick">
+<!--
+  <view class="button" bindtap="onMeihuaClick">
     <view class="button-background tiffany-bkg">
       <view>
         <image class="button-img" src="../../resources/img/ziwei.png"></image>
@@ -72,5 +75,6 @@
       </div>
     </view>
   </view>
+  -->
 </view>
 </scroll-view>
