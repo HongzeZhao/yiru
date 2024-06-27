@@ -1,6 +1,18 @@
 <!--pages/meihua-input/minput.wxml-->
 <scroll-view class="scrollarea" scroll-y type="list">
 <view class="container">
+<view>
+    <view class="banner-container idle-bkg">
+        <view>
+            <image class="banner-img" src="../../resources/img/character.png"></image>
+        </view>
+        <div>
+            <view class="banner-text-title">摸头知性格</view>
+            <view class="banner-text-desc">
+                当然还需要你的生日咯，不知道出生时间的就去问妈妈，不然测不准！</view>
+        </div>
+    </view>
+</view>
 <view class="table-container" hidden="{{!lunarValid}}">
     <view class="table-row table-head">
         <view class="table-cell">{{yearText}}</view>
@@ -25,7 +37,7 @@
     <text>我们不采集隐私喔，但是告诉你的生日和性别之后才能猜得准！</text>
   </view>
   <view class="form-group">
-    <text class="label">出生日期：</text>
+    <text class="label">阳历生日：</text>
     <picker mode="date" value="{{date}}" start="1900-01-01" end="2024-12-31" bindchange="bindDateChange">
       <view class="picker {{dateValid ? '' : 'error-state'}}">
         {{date}}
@@ -33,11 +45,14 @@
     </picker>
     <text hidden="{{dateValid}}" class="valid-check-tips">请输入</text>
   </view>
+  <view class="input-tips">
+    <text>时辰记不清？摸摸头顶的发旋：偏左或居中是“子午卯酉”；偏右是“寅申巳亥”；双旋是“辰戌丑未”</text>
+  </view>
   <view class="form-group">
-    <text class="label">出生时间：</text>
-    <picker mode="time" value="{{hour}}" bindchange="bindHourChange">
+    <text class="label">出生时辰：</text>
+    <picker mode="selector" range="{{hourRange}}" bindchange="bindHourChange" value="{{hour}}">
       <view class="picker {{hourValid ? '' : 'error-state'}}">
-        {{hour}}
+        {{hourInputText}}
       </view>
     </picker>
     <text hidden="{{hourValid}}" class="valid-check-tips">请输入</text>

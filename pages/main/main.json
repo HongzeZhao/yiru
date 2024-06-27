@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-      "calendar" : "/component/calendar-v2"
-  }
+  },
+  "navigationBarBackgroundColor": "#EB5C6E",
+  "navigationBarTextStyle": "white"
 }

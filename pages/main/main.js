@@ -1,32 +1,12 @@
 // pages/main.js
 const {Solar} = require('lunar-javascript');
 
-// 引入插件安装器
-import plugin from '../../component/calendar-v2/plugins/index'
-
-// 农历相关功能
-import solarLunar from '../../component/calendar-v2/plugins/solarLunar/index'
-import holidays from '../../component/calendar-v2/plugins/holidays/index'
-
-// 开始安装，支持链式调用
-plugin.use(holidays).use(solarLunar)
-
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    calendarConfig: {
-        showLunar: true, // 是否显示农历，此配置会导致 setTodoLabels 中 showLabelAlways 配置失效
-        markToday: '今', // 当天日期展示不使用默认数字，用特殊文字标记
-        emphasisWeek: true, // 是否高亮显示周末日期
-        showHolidays: true, // 显示法定节假日班/休情况，需引入holidays插件
-        showFestival: true, // 显示节日信息（如教师节等），需引入holidays插件
-        highlightToday: true, // 是否高亮显示当天，区别于选中样式（初始化时当天高亮并不代表已选中当天）
-        defaultDate: '2024-06-10', // 默认选中指定某天，如需选中需配置 autoChoosedWhenJump: true
-        firstDayOfWeek: 'Mon', // 每周第一天为周一还是周日，默认按周日开始
-    }
   },
 
   afterTapDate(e) {
@@ -49,10 +29,10 @@ Page({
             dayText: lunar.getDayInChinese(),
             hourText: lunar.getTimeZhi() + '时',
             bazi: {
-                year: bazi.getYear() + '年(' + lunar.getYearShengXiao() + ')',
-                month: bazi.getMonth() + '月(' + lunar.getMonthShengXiao() + ')',
-                day: bazi.getDay() + '日(' + lunar.getDayShengXiao() + ')',
-                time: bazi.getTime() + '时(' + lunar.getTimeShengXiao() + ')',
+                year: bazi.getYear() + lunar.getYearShengXiao() + '年',
+                month: bazi.getMonth() + lunar.getMonthShengXiao() + '月',
+                day: bazi.getDay() + lunar.getDayShengXiao() + '日',
+                time: bazi.getTime() + lunar.getTimeShengXiao() + '时',
                 yearWuxing: bazi.getYearWuXing(),
                 monthWuxing: bazi.getMonthWuXing(),
                 dayWuxing: bazi.getDayWuXing(),

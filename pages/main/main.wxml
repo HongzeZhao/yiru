@@ -1,80 +1,113 @@
 <!--pages/main.wxml-->
 <scroll-view class="scrollarea" scroll-y type="list">
-<view class="container">
-    <image class="watermark" src="../../resources/img/meihua.png" />
-    <view class="table-container">
-    <view class="table-row">
-        <view class="table-cell table-big-text">{{monthText}}月{{dayText}}</view>
-    </view>
-    </view>
-  <calendar config="{{calendarConfig}}" bind:afterTapDate="afterTapDate" />
-  <view class="table-container">
-    <view class="table-row table-head">
-        <view class="table-cell">{{bazi.year}}</view>
-        <view class="table-cell">{{bazi.month}}</view>
-        <view class="table-cell">{{bazi.day}}</view>
-        <view class="table-cell">{{bazi.time}}</view>
-    </view>
-    <view class="table-row table-row-height">
-        <view class="table-cell">{{bazi.yearNaYin}}</view>
-        <view class="table-cell">{{bazi.monthNaYin}}</view>
-        <view class="table-cell">{{bazi.dayNaYin}}</view>
-        <view class="table-cell">{{bazi.timeNaYin}}</view>
-    </view>
-    <view class="table-row table-row-height">
-        <view class="table-cell">{{bazi.yearWuxing}}</view>
-        <view class="table-cell">{{bazi.monthWuxing}}</view>
-        <view class="table-cell">{{bazi.dayWuxing}}</view>
-        <view class="table-cell">{{bazi.timeWuxing}}</view>
-    </view>
-  </view>
-  <view class="table-container">
-    <view>
-        <view class="table-row-yiji">
-            <text class="label-yiji label-color-green">宜</text>
-            <text class="yiji-text">{{dayYi}}</text>
+    <view class="container">
+        <view class="banner">
+            <view>
+                <image class="banner-img" src="../../resources/img/today.png"></image>
+            </view>
+            <view>
+                <view class="banner-text"><text class="label-yiji pink-bkg">农历</text>{{yearText}}年（{{bazi.year}}）</view>
+                <view class="banner-text banner-big-text">{{monthText}}月{{dayText}}</view>
+            </view>
         </view>
-        <view class="table-row-yiji">
-            <text class="label-yiji label-color-red">忌</text> 
-            <text class="yiji-text">{{dayJi}}</text>
-        </view>
-        <!--
-        <view class="table-row-yiji">
-            <text class="label-yiji label-color-golden">太岁</text>
-            <text class="yiji-text">{{taisui.year}}[年] {{taisui.month}}[月] {{taisui.day}}[日]</text>
-        </view>
-        <view class="table-row-yiji">
-            <text class="label-yiji label-color-blue">冲煞</text>
-            <text class="yiji-text">{{chongsha.day}}[日] {{chongsha.time}}[时]</text>
-        </view>
-        -->
-    </view>
-</view>
-  <view class="button" bindtap="onZiweiClick">
-    <view class="button-background pink-bkg">
-      <view>
-        <image class="button-img" src="../../resources/img/test.png"></image>
-      </view>
-      <div>
-        <view class="button-text-title text-color-red">性格剖析</view>
-        <view class="button-text-desc text-color-red">根据你的生日计算你的星座等信息，从而推测你是个什么样的人，还可给出你生活、事业、爱情等方面的建议。快来试试吧！</view>
-      </div>
-    </view>
-  </view>
 
-<!--
-  <view class="button" bindtap="onMeihuaClick">
-    <view class="button-background tiffany-bkg">
-      <view>
-        <image class="button-img" src="../../resources/img/ziwei.png"></image>
-      </view>
-      <div>
-        <view class="button-text-title text-color-green">猜你所思</view>
-        <view class="button-text-desc text-color-green">
-穿越千古《易》理，我将繁琐化简，融合人工智能技术，猜猜你的所思所想。</view>
-      </div>
+        <view class="yiji-container">
+            <view class="row-yiji">
+                <text class="label-yiji tiffany-bkg">宜</text>
+                <text class="yiji-text">{{dayYi}}</text>
+            </view>
+            <view class="row-yiji">
+                <text class="label-yiji pink-bkg">忌</text>
+                <text class="yiji-text">{{dayJi}}</text>
+            </view>
+        </view>
+        <view class="button" bindtap="onZiweiClick">
+            <view class="button-container pink-bkg">
+                <view>
+                    <image class="button-img" src="../../resources/img/character.png"></image>
+                </view>
+                <view>
+                    <view class="button-text-title">摸摸头吧</view>
+                    <view class="button-text-desc">根据你的生日推测你是个什么样的人，还可给出你生活、事业、爱情等方面的建议。快来试试吧！</view>
+                </view>
+            </view>
+        </view>
+
+        <view class="button" bindtap="onTaohuaClick">
+            <view class="button-container flower-bkg">
+                <view>
+                    <image class="button-img" src="../../resources/img/plum-blossom.png"></image>
+                </view>
+                <div>
+                    <view class="button-text-title">桃花朵朵</view>
+                    <view class="button-text-desc">今天能不能遇到那个TA？最好的猎手都以猎物的方式出现，桃花旺的时候要展示自己的魅力！</view>
+                </div>
+            </view>
+        </view>
+
+        <view class="button" bindtap="onMoneyClick">
+            <view class="button-container money-bkg">
+                <view>
+                    <image class="button-img" src="../../resources/img/yuanbao.png"></image>
+                </view>
+                <div>
+                    <view class="button-text-title">飞来横财</view>
+                    <view class="button-text-desc">
+                        今天能不能搞到钱？打铁还需自身硬，赚钱还是得有金刚钻！</view>
+                </div>
+            </view>
+        </view>
+
+        <view class="button" bindtap="onWorkClick">
+            <view class="button-container work-bkg">
+                <view>
+                    <image class="button-img" src="../../resources/img/work.png"></image>
+                </view>
+                <div>
+                    <view class="button-text-title">整顿职场</view>
+                    <view class="button-text-desc">
+                        今天工作顺不顺利？那得看你今天有没有拍老板的马屁！拍的有没有死角？</view>
+                </div>
+            </view>
+        </view>
+
+        <view class="button" bindtap="onFlurtClick">
+            <view class="button-container flurt-bkg">
+                <view>
+                    <image class="button-img" src="../../resources/img/cool.png"></image>
+                </view>
+                <div>
+                    <view class="button-text-title">一顿猛夸</view>
+                    <view class="button-text-desc">
+                        今天不开心？我来夸夸你！夸你个顺风顺水，夸你个虎虎生威，夸你个好人一生平安！</view>
+                </div>
+            </view>
+        </view>
+
+        <view class="button" bindtap="onFlurtClick">
+            <view class="button-container missing-bkg">
+                <view>
+                    <image class="button-img" src="../../resources/img/zoom.png"></image>
+                </view>
+                <div>
+                    <view class="button-text-title">东西掉了</view>
+                    <view class="button-text-desc">
+                        东西掉了你就捡起来呀！你看，不就在那吗？</view>
+                </div>
+            </view>
+        </view>
+
+        <view class="button" bindtap="onFlurtClick">
+            <view class="button-container idle-bkg">
+                <view>
+                    <image class="button-img" src="../../resources/img/idle.png"></image>
+                </view>
+                <div>
+                    <view class="button-text-title">好无聊啊</view>
+                    <view class="button-text-desc">
+                        都这么大的人了，还要我教你做事吗？</view>
+                </div>
+            </view>
+        </view>
     </view>
-  </view>
-  -->
-</view>
 </scroll-view>

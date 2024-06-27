@@ -1,151 +1,135 @@
 /* pages/main.wxss */
 .container {
-  position: relative;
-  width: 100%;
-  height: 100%;
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 .button {
-  display: block;
-  width: calc(100% - 20px);
-  height: 150px;
-  border: none;
-  margin: 10px 5px;
-  border-radius: 10px;
+    display: block;
+    width: calc(100% - 20px);
+    height: 150px;
+    border: none;
+    margin: 10px 5px;
+    border-radius: 10px;
 }
 
 .button:active {
-  background-color: #ca2b07; /* 点击后的背景颜色 */
-  opacity: 0.5; /* 点击后的透明度 */
+    background-color: #ca2b07;
+    /* 点击后的背景颜色 */
+    opacity: 0.5;
+    /* 点击后的透明度 */
 }
 
-.button-background {
-  display: flex;
-  align-items: center; /* 垂直居中 */
-  border-radius: 10px;
-  width: 100%;
-  height: 100%;
+.button-container {
+    display: flex;
+    align-items: center;
+    /* 垂直居中 */
+    border-radius: 10px;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    padding: 10px;
+    color: white;
 }
 
 .button-img {
-  height: 64px;
-  width: 64px;
-  margin-left: 10px;
+    height: 88px;
+    width: 88px;
+    margin: 10px;
 }
 
 .button-text-title {
-  padding-right: 10px;
-  padding-left: 10px;
-  font-size: 24px;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 24px;
 }
 
 .button-text-desc {
-  padding-right: 10px;
-  padding-left: 10px;
-  font-size: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 10px;
 }
 
-.watermark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100px;
-  height: 100px;
-  background-size: contain;
+.banner {
+    display: flex;
+    align-items: center;
+    /* 垂直居中 */
+    width: 100%;
+    height: 100%;
 }
 
-.text-color-red {
-  color: darkred;
+.banner-img {
+    height: 88px;
+    width: 88px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
-.text-color-green {
-  color: #004440;
+.banner-text {
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 10px;
+    color: #EB5C6E;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.banner-big-text {
+    font-size: 36px;
+    font-weight: bold;
+    margin-left: 20px;
 }
 
 /* 颜色样式 */
 .pink-bkg {
-  background-color: #ffb6c1; /* 淡粉色 */
+    background-color: #EB5C6E;
+    /* 淡粉色 */
 }
 
 .tiffany-bkg {
-  background-color: #0abab5; /* Tiffany色 */
+    background-color: #0abab5;
+    /* Tiffany色 */
 }
 
-.table-container {
+.flower-bkg {
+    background-color: pink;
+}
+
+.money-bkg {
+    background-color: burlywood;
+}
+
+.work-bkg {
+    background-color: cornflowerblue;
+}
+
+.flurt-bkg {
+    background-color: #0abab5;
+}
+
+.missing-bkg {
+    background-color: plum;
+}
+
+.idle-bkg {
+    background-color: yellowgreen;
+}
+
+.yiji-container {
     display: flex;
     flex-direction: column;
     width: 100%;
     font-size: 12px;
     margin-top: 0;
     margin-bottom: 10px;
-  }
-  
-  .table-row {
-    display: flex;
-    flex-direction: row;
-    border-bottom: 1px dashed rgb(255,222,233);
-    color: #0abab5;
-  }
+}
 
-  .table-row-height {
-      height: 24px;
-  }
+.row-yiji {
+    padding: 10px 10px 5px 20px;
+}
 
-  .table-head {
-      font-weight: bold;
-      color: white;
-      padding: 5px 2px 5px 2px;
-      background-color: #0abab5;
-  }
-  
-  .table-cell {
-    flex: 1;
+.label-yiji {
+    margin-right: 20px;
     padding: 2px;
-    text-align: center;
-    border-right: 1px dashed rgb(255,222,233);
-    font-family: 'Times New Roman', Times, serif;
-  }
-
-  .table-big-text {
-      color: darkred;
-      font-size: 36px;
-      font-weight: bold;
-      margin-left: 20px;
-      background-image:
-      repeating-linear-gradient(-45deg, rgb(255, 248, 250) 0, rgb(255, 248, 250) 10px, #fff 0, #fff 20px);
-  }
-  
-  .table-row:last-child {
-    border-bottom: none;
-  }
-  
-  .table-cell:last-child {
-    border-right: none;
-  }
-
-  .table-row-yiji {
-      padding: 10px 10px 5px 20px;
-  }
-
-  .label-yiji {
-      margin-right: 20px;
-      padding: 2px;
-      border-radius: 3px;
-      color: white
-  }
-
-  .label-color-green {
-    background-color: green;
-  }
-
-  .label-color-red {
-    background-color: darkred;
-  }
-
-  .label-color-blue {
-    background-color: darkblue;
-  }
-
-  .label-color-golden {
-    background-color: darkgoldenrod;
-  }
+    border-radius: 3px;
+    color: white
+}

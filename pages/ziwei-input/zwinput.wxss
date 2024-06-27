@@ -1,166 +1,141 @@
 /* pages/meihua-input/minput.wxss */
 .container {
     padding: 20px;
-    background-color: white;
-  }
-  
-  .form-group {
+    background-color: #EB5C6E;
+}
+
+.form-group {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
     width: 100%;
-  }
-  
-  .label {
+}
+
+.label {
     display: flex;
     justify-content: space-between;
     width: 25%;
-    color: darkred; /* Bootstrap默认字体颜色 */
+    color: white;
+    /* Bootstrap默认字体颜色 */
     font-weight: bold;
     margin-right: 10px;
     font-size: 14px;
-  }
+}
 
-  .valid-check-tips {
-      color: red;
-      font-size: 10px;
-      vertical-align: top;
-      margin-left: 5px;
-  }
-  
-  .picker {
+.valid-check-tips {
+    color: yellow;
+    font-size: 10px;
+    vertical-align: top;
+    margin-left: 5px;
+}
+
+.picker {
     flex: 1;
     background-color: white;
-    border: 1px solid darkred; /* Bootstrap的表单控件边框颜色 */
+    /* Bootstrap的表单控件边框颜色 */
     border-radius: 0.25rem;
     padding: 6px 12px;
-    color: darkred; /* Bootstrap的表单控件文本颜色 */
+    color: #EB5C6E;
+    /* Bootstrap的表单控件文本颜色 */
     font-size: 14px;
-  }
-  
-  .picker::after {
-    display: none; /* 移除默认箭头，Bootstrap风格通常不使用该样式 */
-  }
+}
 
-  .input-field {
+.picker::after {
+    display: none;
+    /* 移除默认箭头，Bootstrap风格通常不使用该样式 */
+}
+
+.input-field {
     flex: 1;
     background-color: white;
-    border: 1px solid darkred; /* Bootstrap的表单控件边框颜色 */
+    /* Bootstrap的表单控件边框颜色 */
     border-radius: 0.25rem;
     padding: 6px 12px;
     margin-right: 5px;
-    color: darkred; /* Bootstrap的表单控件文本颜色 */
+    color: #EB5C6E;
+    /* Bootstrap的表单控件文本颜色 */
     font-size: 12px;
-  }
+}
 
-  .error-state {
+.error-state {
     border-color: red;
     color: red;
 }
 
-  .input-tips {
-      font-size: 12px;
-      color: darkred;
-      background-color: lightpink;
-      border-radius: 5px;
-      padding: 10px;
-      margin-bottom: 10px;
-      opacity: 0.8;
-  }
+.input-tips {
+    font-size: 12px;
+    color: #EB5C6E;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
 
-  .divine {
+.divine {
     background-color: darkred;
     border: solid 1px darkred;
     border-radius: 10px;
-  }
-  
-  .turtle {
+}
+
+.turtle {
     overflow: hidden;
     width: 128px;
     height: 128px;
     border-radius: 10px;
     opacity: 0.9;
     background-color: white;
-  }
-  
-  .divine-text {
+}
+
+.divine-text {
     text-align: center;
     font-size: 16px;
     color: white;
     font-weight: bold;
     padding-bottom: 10px;
-  }
-  
-  .divine:active {
+}
+
+.divine:active {
     opacity: 0.5;
-  }
+}
 
-  .lunar-text {
-    font-size: 10px;
-    color: darkred;
-    border-radius: 5px;
-    padding: 10px;
-    border: solid 1px darkred;
-    margin-bottom: 10px;
-    opacity: 0.7;
-  }
-
-  .random-gen {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 12px;
-    font-weight: bold;
-    color: darkred;
-    background-color: lightpink;
-    border-radius: 5px;
-    padding: 10px;
-    border: solid 1px darkred;
-    margin-bottom: 10px;
-    width: 100%;
-  }
-
-  .random-gen:active {
-      opacity: 0.5;
-  }
-
-  .table-container {
+.table-container {
     display: flex;
     flex-direction: column;
     width: 100%;
     font-size: 12px;
     margin-bottom: 10px;
-  }
-  
-  .table-row {
+}
+
+.table-row {
     display: flex;
     flex-direction: row;
-    border-bottom: 1px dashed lightpink;
-    color: darkred
-  }
+    border-bottom: 1px solid lightpink;
+    color: pink;
+}
 
-  .table-head {
-      font-weight: bold;
-      background-color: darkred;
-      color: white;
-  }
-  
-  .table-cell {
+.table-head {
+    font-weight: bold;
+    background-color: lightpink;
+    color: #EB5C6E;
+}
+
+.table-cell {
     flex: 1;
     padding: 8px;
     text-align: center;
-    border-right: 1px dashed lightpink;
-  }
-  
-  .table-row:last-child {
-    border-bottom: none;
-  }
-  
-  .table-cell:last-child {
-    border-right: none;
-  }
+    border-right: 1px solid lightpink;
+}
 
-  /* 弹窗容器样式 */
+.table-row:last-child {
+    border-bottom: none;
+}
+
+.table-cell:last-child {
+    border-right: none;
+}
+
+/* 弹窗容器样式 */
 .modal-container {
     position: fixed;
     top: 0;
@@ -172,46 +147,76 @@
     justify-content: center;
     align-items: center;
     z-index: 999;
-  }
-  
-  /* 弹窗内容区域 */
-  .modal-content {
+}
+
+/* 弹窗内容区域 */
+.modal-content {
     width: 80%;
     background-color: #FFFFFF;
     padding: 20px;
     border-radius: 10px;
     overflow: hidden;
-  }
-  
-  /* 滚动视图 */
-  .modal-scroll-view {
-    height: 60vh; /* 调整高度以适应内容 */
+}
+
+/* 滚动视图 */
+.modal-scroll-view {
+    height: 60vh;
+    /* 调整高度以适应内容 */
     overflow-y: scroll;
-  }
-  
-  /* 按钮样式 */
-  .modal-button {
+}
+
+/* 按钮样式 */
+.modal-button {
     margin-top: 20px;
     padding: 10px;
-    background-color: #0abab5;
+    background-color: #EB5C6E;
     color: white;
     text-align: center;
     border-radius: 5px;
     display: block;
     width: 100%;
     font-size: 14px;
-  }
+}
 
-  .modal-button:active {
-      opacity: 0.5;
-  }
+.modal-button:active {
+    opacity: 0.5;
+}
 
-  .model-text-head {
+.model-text-head {
     font-size: 14px;
     font-weight: bold;
-  }
+}
 
-  .model-text {
-      font-size: 12px;
-      color: #888888;
-  }
+.model-text {
+    font-size: 12px;
+    color: #888888;
+}
+
+.banner-container {
+    display: flex;
+    align-items: center;
+    /* 垂直居中 */
+    border-radius: 10px;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    padding: 10px;
+    color: white;
+}
+
+.banner-img {
+    height: 88px;
+    width: 88px;
+    margin: 10px;
+}
+
+.banner-text-title {
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 24px;
+}
+
+.banner-text-desc {
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 10px;
+}

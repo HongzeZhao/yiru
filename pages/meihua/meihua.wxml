@@ -2,8 +2,8 @@
 <scroll-view class="scrollarea" scroll-y type="list">
   <view class="container">
     <view class="goodbad">{{goodbad}}</view>
-    <view class="weui-flex gua-pairs">
-        <view class="weui-flex__item gua-pair">
+    <view class="gua-pairs">
+        <view class="gua-pair">
             <view class="gua-area-tips">
             本卦（现在状态）
             </view>
@@ -15,7 +15,7 @@
                 <image wx:for="{{benGua.codes}}" wx:key="benYao" wx:for-item="benYao"  class="yao-pic" src="../../resources/yao_pic/{{benYao}}.png"></image>
             </view>
         </view>
-        <view class="weui-flex__item gua-pair">
+        <view class="gua-pair">
             <view class="gua-area-tips">
             互卦（发展状态）
             </view>
@@ -27,7 +27,7 @@
                 <image wx:for="{{huGua.codes}}" wx:key="huYao" wx:for-item="huYao" class="yao-pic" src="../../resources/yao_pic/{{huYao}}.png"></image>
             </view>
         </view>
-        <view class="weui-flex__item gua-pair">
+        <view class="gua-pair">
             <view class="gua-area-tips">
             变卦（最终状态）
             </view>
@@ -50,12 +50,12 @@
             <image class="loading-img" src="../../resources/img/loading6.gif"></image>
         </view>
         <view>
-            <text> 正在加载大模型解读... </text>
+            <text> 正在加载智慧之答案... </text>
         </view>
     </view>
 
     <view class="safety-tips" hidden="{{loadingModel}}">
-        <text> 以下为大模型解读，仅供娱乐，切勿迷信 </text>
+        <text> 以下内容纯属虚构，仅供娱乐，千万别信 </text>
     </view>
     <view class="model-explain user-select" hidden="{{loadingModel}}">
         <mp-html content="{{modelExplain}}" />
