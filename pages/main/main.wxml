@@ -21,93 +21,62 @@
                 <text class="yiji-text">{{dayJi}}</text>
             </view>
         </view>
-        <view class="button" bindtap="onZiweiClick">
-            <view class="button-container pink-bkg">
-                <view>
-                    <image class="button-img" src="../../resources/img/character.png"></image>
-                </view>
-                <view>
-                    <view class="button-text-title">摸摸头吧</view>
-                    <view class="button-text-desc">根据你的生日推测你是个什么样的人，还可给出你生活、事业、爱情等方面的建议。快来试试吧！</view>
-                </view>
-            </view>
-        </view>
 
-        <view class="button" bindtap="onTaohuaClick">
-            <view class="button-container flower-bkg">
-                <view>
-                    <image class="button-img" src="../../resources/img/plum-blossom.png"></image>
-                </view>
-                <div>
-                    <view class="button-text-title">桃花朵朵</view>
-                    <view class="button-text-desc">今天能不能遇到那个TA？最好的猎手都以猎物的方式出现，桃花旺的时候要展示自己的魅力！</view>
-                </div>
-            </view>
-        </view>
+        <yr-card
+        start-time="0.1s"
+        background-color="#EB5C6E"
+        icon="character.png"
+        title="摸头知性格"
+        description="根据你的生日推测你是个什么样的人，还可给出你生活、事业、爱情等方面的建议。快来试试吧！"
+        bind:tap="onZiweiClick"></yr-card>
 
-        <view class="button" bindtap="onMoneyClick">
-            <view class="button-container money-bkg">
-                <view>
-                    <image class="button-img" src="../../resources/img/yuanbao.png"></image>
-                </view>
-                <div>
-                    <view class="button-text-title">飞来横财</view>
-                    <view class="button-text-desc">
-                        今天能不能搞到钱？打铁还需自身硬，赚钱还是得有金刚钻！</view>
-                </div>
-            </view>
-        </view>
+        <yr-card
+        start-time="0.2s"
+        background-color="pink"
+        icon="plum-blossom.png"
+        title="桃花朵朵开"
+        description="今天能不能遇到那个TA？最好的猎手都以猎物的方式出现，桃花旺的时候要展示自己的魅力！"
+        bind:tap="onTest"></yr-card>
 
-        <view class="button" bindtap="onWorkClick">
-            <view class="button-container work-bkg">
-                <view>
-                    <image class="button-img" src="../../resources/img/work.png"></image>
-                </view>
-                <div>
-                    <view class="button-text-title">整顿职场</view>
-                    <view class="button-text-desc">
-                        今天工作顺不顺利？那得看你今天有没有拍老板的马屁！拍的有没有死角？</view>
-                </div>
-            </view>
-        </view>
+        <yr-card
+        start-time="0.3s"
+        background-color="burlywood"
+        icon="yuanbao.png"
+        title="飞来小元宝"
+        description="今天能不能搞到钱？打铁还需自身硬，赚钱还是得有金刚钻！"
+        bind:tap="onTest"></yr-card>
 
-        <view class="button" bindtap="onFlurtClick">
-            <view class="button-container flurt-bkg">
-                <view>
-                    <image class="button-img" src="../../resources/img/cool.png"></image>
-                </view>
-                <div>
-                    <view class="button-text-title">一顿猛夸</view>
-                    <view class="button-text-desc">
-                        今天不开心？我来夸夸你！夸你个顺风顺水，夸你个虎虎生威，夸你个好人一生平安！</view>
-                </div>
-            </view>
-        </view>
+        <yr-card
+        start-time="0.4s"
+        background-color="cornflowerblue"
+        icon="work.png"
+        title="整顿职场"
+        description="今天工作顺不顺利？那得看你今天有没有拍老板的马屁！拍的有没有死角？"
+        bind:tap="onTest"></yr-card>
 
-        <view class="button" bindtap="onFlurtClick">
-            <view class="button-container missing-bkg">
-                <view>
-                    <image class="button-img" src="../../resources/img/zoom.png"></image>
-                </view>
-                <div>
-                    <view class="button-text-title">东西掉了</view>
-                    <view class="button-text-desc">
-                        东西掉了你就捡起来呀！你看，不就在那吗？</view>
-                </div>
-            </view>
-        </view>
+        <yr-card
+        start-time="0.15s"
+        background-color="#0abab5"
+        icon="cool.png"
+        title="一顿猛夸"
+        description="今天不开心？我来夸夸你！夸你个顺风顺水，夸你个虎虎生威，夸你个好人一生平安！"
+        bind:tap="onTest"></yr-card>
 
-        <view class="button" bindtap="onFlurtClick">
-            <view class="button-container idle-bkg">
-                <view>
-                    <image class="button-img" src="../../resources/img/idle.png"></image>
-                </view>
-                <div>
-                    <view class="button-text-title">好无聊啊</view>
-                    <view class="button-text-desc">
-                        都这么大的人了，还要我教你做事吗？</view>
-                </div>
-            </view>
-        </view>
+        <yr-card
+        start-time="0.25s"
+        background-color="plum"
+        icon="zoom.png"
+        title="东西掉了？"
+        description="东西掉了你就捡起来呀！你看，不就在那吗？"
+        bind:tap="onTest"></yr-card>
+
+        <yr-card
+        start-time="0.35s"
+        background-color="yellowgreen"
+        icon="idle.png"
+        title="干点啥呢？"
+        description="都这么大的人了，还要我教你做事吗？那我就说一说吧！"
+        bind:tap="onTest"></yr-card>
+
     </view>
 </scroll-view>

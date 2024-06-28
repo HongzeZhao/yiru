@@ -1,5 +1,6 @@
 {
   "usingComponents": {
+      "yr-card": "/pages/components/yr-card"
   },
   "navigationBarBackgroundColor": "#EB5C6E",
   "navigationBarTextStyle": "white"

@@ -133,3 +133,35 @@
     border-radius: 3px;
     color: white
 }
+
+@keyframes breathing {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }
+  
+  /* 应用动画 */
+  .breathing-infinate {
+    animation: breathing 2s infinite;
+  }
+
+  /* 定义摇头晃脑的动画 */
+@keyframes shake {
+    0%, 100% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(-1deg);
+    }
+    75% {
+      transform: rotate(1deg);
+    }
+  }
+  
+  /* 应用动画 */
+  .shake-infinate {
+    animation: shake 0.5s infinite;
+  }

@@ -5,9 +5,9 @@
     "pages/ziwei-input/zwinput"
   ],
   "window": {
-    "navigationBarTextStyle": "black",
+    "navigationBarTextStyle": "white",
     "navigationBarTitleText": "易如小黄历",
-    "navigationBarBackgroundColor": "#ffffff"
+    "navigationBarBackgroundColor": "#EB5C6E"
   },
   "style": "v2",
   "componentFramework": "glass-easel",

@@ -1,0 +1,89 @@
+/* pages/components/yr-user-info/index.wxss */
+
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.label {
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+    color: white;
+    /* Bootstrap默认字体颜色 */
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.valid-check-tips {
+    color: yellow;
+    font-size: 10px;
+    vertical-align: top;
+    margin-left: 5px;
+}
+
+.picker {
+    flex: 1;
+    background-color: white;
+    /* Bootstrap的表单控件边框颜色 */
+    border-radius: 0.25rem;
+    padding: 6px 12px;
+    /* Bootstrap的表单控件文本颜色 */
+    font-size: 14px;
+}
+
+.picker::after {
+    display: none;
+    /* 移除默认箭头，Bootstrap风格通常不使用该样式 */
+}
+
+.error-state {
+    border-color: red;
+    color: red;
+}
+
+.input-tips {
+    font-size: 12px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+.table-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.table-row {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid;
+}
+
+.table-head {
+    font-weight: bold;
+}
+
+.table-cell {
+    flex: 1;
+    padding: 8px;
+    text-align: center;
+    border-right: 1px solid;
+}
+
+.table-row:last-child {
+    border-bottom: none;
+}
+
+.table-cell:last-child {
+    border-right: none;
+}

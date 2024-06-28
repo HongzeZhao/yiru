@@ -1,9 +1,9 @@
 {
   "usingComponents": {
+    "yr-loading-content": "/pages/components/yr-loading-content",
+    "yr-button": "/pages/components/yr-button",
+    "yr-user-info": "/pages/components/yr-user-info"
   },
   "navigationBarBackgroundColor": "#EB5C6E",
-  "navigationBarTextStyle": "white",
-  "window": {
-    "backgroundColor": "#EB5C6E"
-  }
+  "navigationBarTextStyle": "white"
 }

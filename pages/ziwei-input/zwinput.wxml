@@ -14,6 +14,18 @@
                 </div>
             </view>
         </view>
+
+        <yr-user-info
+        color="#EB5C6E"
+        head-color="pink"
+        bind:birthday="onInputChanged"
+        bind:gender="onInputChanged"
+        date-valid="{{dateValid}}"
+        hour-valid="{{hourValid}}"
+        gender-valid="{{genderValid}}"
+        ></yr-user-info>
+
+        <!--
         <view class="table-container" hidden="{{!lunarValid}}">
             <view class="table-row table-head">
                 <view class="table-cell">{{yearText}}</view>
@@ -67,10 +79,11 @@
             </picker>
             <text hidden="{{genderValid}}" class="valid-check-tips">请输入</text>
         </view>
-        <view class="divine" bind:tap="ondivineTapped">
-            <image src="../../resources/img/startread.png" class="divine-img"></image>
-            <view class="divine-text">嘛咪嘛咪哄</view>
-        </view>
+        -->
+
+        <yr-button style="width:100%;" bind:tap="ondivineTapped" text="点击开始分析" icon="startread.png"></yr-button>
+
+        <yr-loading-content style="width: 100%;" color="#EB5C6E" loading-model="{{false}}" html="<h1>hello</h1>急急急扣篮大赛记录雷克萨交流电机阿里卡大数据迪卢克撒就大家萨拉丁金卡的垃圾收到啦到啦" />
         
     </view>
     <!-- 弹窗结构 -->

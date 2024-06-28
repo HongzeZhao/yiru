@@ -9,18 +9,9 @@ Page({
   data: {
   },
 
-  afterTapDate(e) {
-      console.log(e.detail);
-      const nowDt = `${e.detail.year}-${e.detail.month}-${e.detail.date}`;
-      const now = new Date();
-      const nowTime = `${now.getHours()}:${now.getMinutes()}`;
-      this.onBirthdayChange(nowDt, nowTime);
-  },
-
-  onBirthdayChange(dtStr, timeStr) {
-    let solar = this.getSolarObject(dtStr, timeStr);
-    if (solar != null) {
-        let lunar = solar.getLunar();
+  afterTapDate() {
+    let solar = Solar.fromDate(new Date());
+    let lunar = solar.getLunar();
         let bazi = lunar.getEightChar();
         this.setData({
             lunarText: lunar.toFullString(),
@@ -42,45 +33,14 @@ Page({
                 dayNaYin: bazi.getDayNaYin(),
                 timeNaYin: bazi.getTimeNaYin(),
             },
-            taisui: {
-                year: lunar.getYearPositionTaiSuiDesc(),
-                month: lunar.getMonthPositionTaiSuiDesc(),
-                day: lunar.getDayPositionTaiSuiDesc(),
-            },
-            chongsha: {
-                day: lunar.getDayChongDesc(),
-                time: lunar.getTimeChongDesc()
-            },
             dayYi: lunar.getDayYi().join(" "),
-            dayJi: lunar.getDayJi().join(""),
+            dayJi: lunar.getDayJi().join(" "),
             week: lunar.getWeekInChinese(),
-            xiu: lunar.getXiu() + lunar.getAnimal() + lunar.getXiuLuck(),
             yuexiang: lunar.getYueXiang(),
             lunarValid: true,
           });
 
         console.log(lunar.toFullString());
-    } else {
-        console.log("solar object null");
-    }
-  },
-
-  getSolarObject(dtStr, timeStr) {
-    if (!dtStr) return null;
-    const dts = dtStr.split('-');
-    if (dts.length !== 3) return null;
-    const year = parseInt(dts[0]);
-    const month = parseInt(dts[1]);
-    const day = parseInt(dts[2]);
-
-    const ts = timeStr.split(':');
-    if (ts != undefined && ts.length === 2) {
-        const hour = parseInt(ts[0]);
-        const minute = parseInt(ts[1]);
-        return Solar.fromYmdHms(year, month, day, hour, minute, 0);
-    } else {
-        return Solar.fromYmd(year, month, day);
-    }
   },
 
   onZiweiClick(e) {
@@ -97,14 +57,15 @@ Page({
     console.log(e);
   },
 
+  onTest(e) {
+      console.log("component tapped" + toString(e));
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-      const now = new Date();
-      const nowDt = `${now.getFullYear()}-${now.getMonth()+1}-${now.getDate()}`;
-      const nowTime = `${now.getHours()}:${now.getMinutes()}`;
-      this.onBirthdayChange(nowDt, nowTime);
+      this.afterTapDate();
   },
 
   /**

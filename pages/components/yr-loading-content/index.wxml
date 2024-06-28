@@ -1,0 +1,18 @@
+<!--pages/components/yr-html-area/index.wxml-->
+<view class="loading-container">
+    <view class="loading-area" hidden="{{!loadingModel}}">
+        <view>
+            <image class="loading-img" src="../../../resources/img/loading.gif"></image>
+        </view>
+        <view style="color: {{color}};">
+            <text> 结果加载中，稍等一下下... </text>
+        </view>
+    </view>
+
+    <view class="safety-tips" style="background-color: {{color}};" hidden="{{loadingModel}}">
+        <text> 以下内容纯属瞎掰，如有雷同，纯属雷人 </text>
+    </view>
+    <view class="model-explain user-select" style="color: {{color}};" hidden="{{loadingModel}}">
+        <mp-html content="{{html}}" />
+    </view>
+</view>

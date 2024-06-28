@@ -1,0 +1,12 @@
+<!--pages/yr-card.wxml-->
+<view class="button shake-infinate" style="animation-delay:{{startTime}}" bindtap="{{bind}}">
+    <view class="button-container" style="background-color: {{backgroundColor}};">
+        <view>
+            <image class="button-img" src="../../../resources/img/{{icon}}"></image>
+        </view>
+        <div>
+            <view class="button-text-title">{{title}}</view>
+            <view class="button-text-desc">{{description}}</view>
+        </div>
+    </view>
+</view>

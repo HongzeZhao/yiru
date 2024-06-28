@@ -1,0 +1,5 @@
+<!--pages/components/yr-button/index.wxml-->
+<button class="divine breathing-infinate">
+    <image src="../../../resources/img/{{icon}}" class="divine-img"></image>
+    <view class="divine-text">{{text}}</view>
+</button>

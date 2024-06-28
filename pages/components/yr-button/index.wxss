@@ -1,0 +1,51 @@
+/* pages/components/yr-button/index.wxss */
+
+
+.divine {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+    border-radius: 50px;
+    padding: 10px;
+    width: 100%;
+}
+
+.divine:active {
+    opacity: 0.5;
+    width: 80%;
+}
+
+.divine-img {
+    overflow: hidden;
+    width: 100px;
+    height: 64px;
+    border-radius: 10px;
+}
+
+.divine-text {
+    text-align: center;
+    font-size: 16px;
+    color: #EB5C6E;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+/* 定义动画 */
+@keyframes breathing {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* 应用动画 */
+.breathing-infinate {
+    animation: breathing 2s infinite;
+}
