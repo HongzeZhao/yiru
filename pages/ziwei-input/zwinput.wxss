@@ -1,7 +1,20 @@
 /* pages/meihua-input/minput.wxss */
+page {
+    background-color: #EB5C6E;
+}
+
+.pull-area {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%; /* 根据需要调整高度 */
+    z-index: -1;
+    background-color: #EB5C6E;
+}
+
 .container {
     padding: 20px;
-    background-color: #EB5C6E;
 }
 
 .form-group {
@@ -73,30 +86,33 @@
 }
 
 .divine {
-    background-color: darkred;
-    border: solid 1px darkred;
-    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+    border-radius: 50px;
+    width: 100%;
 }
 
-.turtle {
+.divine:active {
+    opacity: 0.5;
+    width: 80%;
+}
+
+.divine-img {
     overflow: hidden;
-    width: 128px;
-    height: 128px;
+    width: 100px;
+    height: 64px;
     border-radius: 10px;
-    opacity: 0.9;
-    background-color: white;
 }
 
 .divine-text {
     text-align: center;
     font-size: 16px;
-    color: white;
+    color: #EB5C6E;
     font-weight: bold;
     padding-bottom: 10px;
-}
-
-.divine:active {
-    opacity: 0.5;
 }
 
 .table-container {

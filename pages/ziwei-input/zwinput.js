@@ -126,6 +126,7 @@ Page({
         hourValid: this.data.hour != undefined && this.data.hour >= 0,
         genderValid: this.data.gender === '男' || this.data.gender === '女',
     });
+    return;
     if (this.data.dateValid && this.data.hourValid && this.data.genderValid) {
         let encodedData = encodeURIComponent(JSON.stringify(this.data));
         if (wx.getStorageSync('ziwei.agree') === true) {
