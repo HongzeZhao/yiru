@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/main/main",
-    "pages/ziwei-input/zwinput"
+    "pages/main/index",
+    "pages/ziwei/index",
+    "pages/flower/index"
   ],
   "window": {
     "navigationBarTextStyle": "white",
