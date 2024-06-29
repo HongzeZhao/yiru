@@ -9,7 +9,7 @@ Page({
   data: {
   },
 
-  afterTapDate() {
+  onUpdateTodayDate() {
     let solar = Solar.fromDate(new Date());
     let lunar = solar.getLunar();
         let bazi = lunar.getEightChar();
@@ -45,14 +45,14 @@ Page({
 
   onZiweiClick(e) {
     wx.navigateTo({
-      url: '/pages/ziwei-input/zwinput',
+      url: '/pages/ziwei/index',
     })
     console.log(e);
   },
 
-  onMeihuaClick(e) {
+  onFlowerClick(e) {
     wx.navigateTo({
-      url: '/pages/meihua-input/mhinput',
+      url: '/pages/flower/index',
     })
     console.log(e);
   },
@@ -65,7 +65,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-      this.afterTapDate();
+      this.onUpdateTodayDate();
   },
 
   /**

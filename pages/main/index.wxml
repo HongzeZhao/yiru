@@ -36,7 +36,7 @@
         icon="plum-blossom.png"
         title="桃花朵朵开"
         description="今天能不能遇到那个TA？最好的猎手都以猎物的方式出现，桃花旺的时候要展示自己的魅力！"
-        bind:tap="onTest"></yr-card>
+        bind:tap="onFlowerClick"></yr-card>
 
         <yr-card
         start-time="0.3s"
