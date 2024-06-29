@@ -2,8 +2,11 @@
   "usingComponents": {
     "yr-loading-content": "/pages/components/yr-loading-content",
     "yr-button": "/pages/components/yr-button",
-    "yr-user-info": "/pages/components/yr-user-info"
+    "yr-user-info": "/pages/components/yr-user-info",
+    "yr-agreements": "/pages/components/yr-agreements",
+    "yr-share-button": "/pages/components/yr-share-button"
   },
   "navigationBarBackgroundColor": "#EB5C6E",
-  "navigationBarTextStyle": "white"
+  "navigationBarTextStyle": "white",
+  "enableShareAppMessage": true
 }

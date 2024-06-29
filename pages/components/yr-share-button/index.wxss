@@ -1,0 +1,92 @@
+/* pages/components/yr-share-button/index.wxss */
+
+.share-button-container {
+    width: 100%;
+}
+
+.share-img {
+    width: 38px;
+    height: 38px;
+    margin-right: 5px;
+}
+
+.share-text {
+    width: calc(100% - 48px);
+}
+
+.share-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: white;
+    border-radius: 10px;
+    margin: 20px;
+    font-size: 14px;
+}
+
+.share-button:active {
+    opacity: 50%;
+}
+
+/* 定义渐变动画 */
+@keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+      transform: scale(1.1);
+    }
+    100% {
+      background-position: 0% 50%;
+      transform: scale(1);
+    }
+  }
+  
+  /* 定义按钮样式 */
+  .button-macaron {
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #a8c0ff); /* 马卡龙色渐变 */
+    background-size: 300% 300%;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    animation: gradient 3s ease infinite; /* 应用动画 */
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8); /* 半透明黑色 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .guide {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: calc(100%-10px);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: right;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .guide-image {
+    width: 100px; /* 根据需要调整 */
+    height: 100px; /* 根据需要调整 */
+  }
+  
+  .guide-text {
+    margin-top: 10px;
+  }

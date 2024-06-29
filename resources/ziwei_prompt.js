@@ -1,28 +1,16 @@
 const { astro } = require('iztro');
 
 /**
- * 计算时辰序号
- * @param {string} hourMin format HH:mm
- * @returns {int} 早子时为0，返回值范围是 0 ~ 12
- */
-function getHourIndexFromTime(hourMin) {
-    const parts = hourMin.split(':');
-    if (parts.length === 2) {
-        const hour = parseInt(parts[0]);
-        return hour === 0 ? 0 : parseInt((hour + 1) / 2);
-    }
-    return -1;
-}
-
-/**
  * 根据阳历的生日、性别生成紫微斗数星盘的描述
  * @param {string} dateStr format yyyy-MM-dd
- * @param {string} timeStr format HH:mm
+ * @param {int} timeIndex format 0~12
  * @param {string} gender  format 男/女
  * @returns 
  */
-function getZiweiAstrolabe(dateStr, timeStr, gender) {
-    const astrolabe = astro.bySolar(dateStr, getHourIndexFromTime(timeStr), gender, true, 'zh-CN');
+function getZiweiAstrolabe(dateStr, timeIndex, gender) {
+    const astrolabe = astro.bySolar(dateStr, parseInt(timeIndex), gender, true, 'zh-CN');
+
+    console.log(JSON.stringify(astrolabe))
 
     function getStarListInfo(stars) {
         if (stars.length <= 0) return '为空';

@@ -1,123 +1,150 @@
 // pages/meihua-input/mhinput.js
-
-const {getAgreements} = require('../../resources/agreements');
-const {Solar} = require('lunar-javascript');
+const {
+    getZiweiAstrolabe
+} = require('../../resources/ziwei_prompt');
 
 Page({
 
-  /**
-   * 页面的初始数据
-   */
-  data: {
-    buttonText: '点击我开始分析',
-    showModal: false,
-    dateValid: true,
-    hourValid: true,
-    genderValid: true,
-    agreements: getAgreements()
-  },
+    /**
+     * 页面的初始数据
+     */
+    data: {
+        buttonText: '点击我开始分析',
+        showAgreements: false,
+        showContentArea: false,
+        dateValid: true,
+        hourValid: true,
+        genderValid: true
+    },
 
+    onInputChanged(e) {
+        this.setData(e.detail);
+    },
 
-
-  onInputChanged(e) {
-      console.log(e.detail);
-      this.setData(e.detail)
-  },
-
-  ondivineTapped(e) {
-    this.setData({
-        showModal: false,
-        dateValid: this.data.date != undefined && this.data.date.split('-').length == 3,
-        hourValid: this.data.hour != undefined && parseInt(this.data.hour) >= 0,
-        genderValid: this.data.gender === '男' || this.data.gender === '女',
-    });
-    return;
-    if (this.data.dateValid && this.data.hourValid && this.data.genderValid) {
-        let encodedData = encodeURIComponent(JSON.stringify(this.data));
-        if (wx.getStorageSync('ziwei.agree') === true) {
-            wx.navigateTo({
-                url: `/pages/ziwei/ziwei?data=${encodedData}`,
-            });
-        } else {
+    onAgreementsUpdated(e) {
+        if (e.detail.value) {
             this.setData({
-                encodedData: encodedData,
-                showModal: true
+                loadingModel: true,
+                showContentArea: true
+            });
+            const date = this.data.date;
+            const hour = this.data.hour;
+            const gender = this.data.gender;
+            const astro = getZiweiAstrolabe(date, hour, gender);
+            let that = this;
+            wx.request({
+                url: 'https://uireal.com/divine', // 必须是HTTPS
+                method: 'POST',
+                data: {
+                    secret: '911',
+                    channel: 'ziwei',
+                    ziwei: {
+                        birthday: date,
+                        time: hour,
+                        gender: gender,
+                        desc: astro.desc,
+                    },
+                },
+                header: {
+                    'content-type': 'application/json' // 默认值
+                },
+                success(res) {
+                    that.setData({
+                        modelExplain: res.data.text,
+                        loadingModel: false
+                    });
+                    console.log(res.data);
+                    wx.setStorageSync('ziwei.data', res.data);
+                },
+                fail(err) {
+                    that.setData({
+                        modelExplain: err.toString(),
+                        loadingModel: false
+                    })
+                    console.log(err)
+                }
             });
         }
+        this.setData({
+            showAgreements: false,
+        });
+    },
+
+    onDivineTapped(e) {
+        this.setData({
+            dateValid: this.data.date != undefined && this.data.date.split('-').length == 3,
+            hourValid: this.data.hour != undefined && parseInt(this.data.hour) >= 0,
+            genderValid: this.data.gender === '男' || this.data.gender === '女',
+        });
+
+        if (this.data.dateValid && this.data.hourValid && this.data.genderValid) {
+            this.setData({
+                showAgreements: true
+            });
+        }
+    },
+
+    /**
+     * 生命周期函数--监听页面加载
+     */
+    onLoad(options) {
+        const ziweiData = wx.getStorageSync('ziwei.data');
+        if (ziweiData && ziweiData.text) {
+            this.setData({
+                modelExplain: ziweiData.text,
+                showContentArea: true
+            });
+        }
+    },
+
+    /**
+     * 生命周期函数--监听页面初次渲染完成
+     */
+    onReady() {
+
+    },
+
+    /**
+     * 生命周期函数--监听页面显示
+     */
+    onShow() {
+
+    },
+
+    /**
+     * 生命周期函数--监听页面隐藏
+     */
+    onHide() {
+
+    },
+
+    /**
+     * 生命周期函数--监听页面卸载
+     */
+    onUnload() {
+
+    },
+
+    /**
+     * 页面相关事件处理函数--监听用户下拉动作
+     */
+    onPullDownRefresh() {
+
+    },
+
+    /**
+     * 页面上拉触底事件的处理函数
+     */
+    onReachBottom() {
+
+    },
+
+    /**
+     * 用户点击右上角分享
+     */
+    onShareAppMessage() {
+        this.setData({
+            showShareGuide: false
+        });
     }
-  },
-
-  onAgree(e) {
-    wx.setStorageSync('ziwei.agree', true);
-
-    this.setData({
-        showModal: false
-      });
-    wx.navigateTo({
-        url: `/pages/ziwei/ziwei?data=${this.data.encodedData}`,
-    });
-  },
-
-  onRefuse(e) {
-      this.setData({
-        showModal: false
-      });
-      wx.navigateBack();
-  },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad(options) {
-    wx.createAnimation()
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {
-
-  }
 })

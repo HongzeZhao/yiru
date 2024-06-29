@@ -1,0 +1,17 @@
+<!--pages/components/yr-agreements/index.wxml-->
+<!-- 弹窗结构 -->
+<view class="modal-container" wx:if="{{showModal}}">
+    <view class="modal-content">
+        <scroll-view class="modal-scroll-view" scroll-y="true">
+            <!-- 这里放置你的弹窗内容 -->
+            <view>
+                <text class="model-text-head">免责声明</text>
+            </view>
+            <view>
+                <text class="model-text">{{agreements}}</text>
+            </view>
+        </scroll-view>
+        <button bind:tap="onRefuse" class="modal-button">拒绝</button>
+        <button bind:tap="onAgree" class="modal-button">同意</button>
+    </view>
+</view>

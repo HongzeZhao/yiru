@@ -1,5 +1,8 @@
 /* pages/components/yr-user-info/index.wxss */
 
+.yr-user-info-container {
+    padding: 20px;
+}
 
 .form-group {
     display: flex;

@@ -1,5 +1,7 @@
 <!--pages/components/yr-button/index.wxml-->
-<button class="divine breathing-infinate">
-    <image src="../../../resources/img/{{icon}}" class="divine-img"></image>
-    <view class="divine-text">{{text}}</view>
-</button>
+<view class="yr-button">
+    <button class="divine {{loading ? 'shake-infinate' : 'breathing-infinate'}}" bind:tap="onTapped">
+        <image src="../../../resources/img/{{icon}}" class="divine-img"></image>
+        <view class="divine-text">{{loading ? loadingText : text}}</view>
+    </button>
+</view>

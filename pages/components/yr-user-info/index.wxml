@@ -1,5 +1,5 @@
 <!--pages/components/yr-user-info/index.wxml-->
-<view>
+<view class="yr-user-info-container">
     <view class="table-container" hidden="{{!lunarValid}}">
         <view class="table-row table-head" style="background-color: {{headColor}}; color: {{color}};border-bottom-color: {{headColor}};">
             <view class="table-cell" style="border-right-color: {{headColor}};">{{yearText}}</view>

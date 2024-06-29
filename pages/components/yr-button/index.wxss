@@ -1,20 +1,20 @@
 /* pages/components/yr-button/index.wxss */
 
-
-.divine {
+.yr-button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
-    background-color: white;
-    border-radius: 50px;
-    padding: 10px;
     width: 100%;
+}
+
+.divine {
+    background-color: white;
+    border-radius: 40px;
+    padding: 10px;
 }
 
 .divine:active {
     opacity: 0.5;
-    width: 80%;
 }
 
 .divine-img {
@@ -49,3 +49,23 @@
 .breathing-infinate {
     animation: breathing 2s infinite;
 }
+
+/* 定义摇头晃脑的动画 */
+@keyframes shake {
+    0%, 100% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(-1deg);
+    }
+    75% {
+      transform: rotate(1deg);
+    }
+  }
+  
+  /* 应用动画 */
+  .shake-infinate {
+    animation: shake 0.5s infinite;
+    opacity: 0.5;
+    width: 80%;
+  }

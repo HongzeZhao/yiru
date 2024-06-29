@@ -1,0 +1,15 @@
+<!--pages/components/yr-share-button/index.wxml-->
+<!-- 遮罩层 -->
+<view class="overlay" wx:if="{{showShareGuide}}" bind:tap="onTapOverlay"></view>
+
+<!-- 指引内容 -->
+<view class="guide" wx:if="{{showShareGuide}}" bind:tap="onTapOverlay">
+  <text class="guide-text">点击右上角的'...'分享给朋友</text>
+</view>
+
+<view class="share-button-container">
+    <button class="share-button button-macaron" bind:tap="onTap">
+        <image class="share-img" src="../../../resources/img/share.png"></image>
+        <text class="share-text">点击分享给TA一起玩！</text>
+    </button>
+</view>

@@ -16,6 +16,10 @@ Component({
     loadingModel: {
         type: Boolean,
         value: true
+    },
+    show: {
+        type: Boolean,
+        value: false
     }
   },
 

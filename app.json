@@ -1,7 +1,6 @@
 {
   "pages": [
     "pages/main/main",
-    "pages/ziwei/ziwei",
     "pages/ziwei-input/zwinput"
   ],
   "window": {
