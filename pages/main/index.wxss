@@ -99,6 +99,14 @@
     color: white
 }
 
+.tiffany-bkg {
+    background-color: #0abab5;
+}
+
+.pink-bkg {
+    background-color: #EB5C6E;
+}
+
 @keyframes breathing {
     0%, 100% {
       transform: scale(1);

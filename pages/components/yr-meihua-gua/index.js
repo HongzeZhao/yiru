@@ -4,10 +4,11 @@ const {
 } = require("../../../resources/meihua");
 
 function getRands() {
+    console.log("rands called");
     return [
-        Math.floor(Math.random() % 1000),
-        Math.floor(Math.random() % 1000),
-        Math.floor(Math.random() % 1000)
+        Math.floor(Math.random() * 1000),
+        Math.floor(Math.random() * 1000),
+        Math.floor(Math.random() * 1000)
     ];
 }
 
@@ -17,6 +18,10 @@ Component({
      * 组件的属性列表
      */
     properties: {
+        show: {
+            type: Boolean,
+            value: false
+        },
         rands: {
             type: Array,
             value: getRands()
@@ -46,9 +51,11 @@ Component({
      */
     methods: {
         onDivine(rands) {
-            const divined = divineByMeihuaNumbers(...rands);
-            this.setData(divined);
-            this.triggerEvent('divined', divined);
+            if (rands && rands.length === 3) {
+                const divined = divineByMeihuaNumbers(...rands);
+                this.setData(divined);
+                this.triggerEvent('divined', divined);
+            }
         }
     }
 })

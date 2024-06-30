@@ -43,7 +43,7 @@ Component({
             let _this = this;
             setInterval(function () {
                 _this.onTouchAnyFlower();
-            }, 15000);
+            }, 10000);
         }
     },
 

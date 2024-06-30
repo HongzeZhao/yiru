@@ -9,6 +9,7 @@ Page({
         buttonText: '点击我开始分析',
         showAgreements: false,
         showContentArea: false,
+        renderMeihua: false,
         flowerSlots: [],
         flowerText: "",
         tips: ["微笑，是最美的语言。",
@@ -125,6 +126,31 @@ Page({
                 showContentArea: true
             });
         }
+
+        // 获取今日缓存
+        const key = this.getTodayRandsKey();
+        const todayRands = wx.getStorageSync(key);
+        if (todayRands) {
+            console.log(`loaded rands ${JSON.stringify(todayRands)} from cache: ${key}`);
+            this.setData({
+                rands: todayRands
+            });
+        } else {
+            this.setData({
+                rands: [
+                    Math.floor(Math.random() * 1000),
+                    Math.floor(Math.random() * 1000),
+                    Math.floor(Math.random() * 1000)
+                ]
+            });
+            wx.setStorageSync(this.getTodayRandsKey(), this.data.rands);
+        }
+    },
+
+    getTodayRandsKey() {
+        const now = new Date();
+        const today = `${now.getFullYear()}${now.getMonth()+1}${now.getDate()}`;
+        return `yuanbao.today.rands.${today}`;
     },
 
     /**
@@ -194,7 +220,7 @@ Page({
             method: 'POST',
             data: {
               secret: '911',
-              channel: 'meihua',
+              channel: 'flower',
               meihua: that.data.meihua
             },
             header: {
@@ -203,6 +229,7 @@ Page({
             success(res) {
                 that.setData({
                     modelExplain: res.data.text,
+                    renderMeihua: res.data.renderMeihua,
                     loadingModel: false
                 })
               wx.setStorageSync('flower.data', res.data);

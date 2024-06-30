@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "yr-loading-content": "/pages/components/yr-loading-content",
+    "yr-button": "/pages/components/yr-button",
+    "yr-agreements": "/pages/components/yr-agreements",
+    "yr-share-button": "/pages/components/yr-share-button",
+    "yr-five-slot": "/pages/components/yr-five-slot",
+    "yr-meihua-gua": "/pages/components/yr-meihua-gua"
+  },
+  "navigationBarBackgroundColor": "#DEB887",
+  "navigationBarTextStyle": "white"
+}

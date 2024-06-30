@@ -14,6 +14,11 @@
     align-items: center;
     width: 100%;
     margin-left: 20px;
+    transition: all 0.1s ease;
+}
+
+.yr-tips-row:active {
+    scale: 1.2;
 }
 
 .yr-tips-head-text {
@@ -55,7 +60,7 @@
 }
 
 .yr-text-row {
-    margin: 0 10px 20px 0;
+    margin: 0 5px 5px 0;
 }
 
 .yr-text {

@@ -23,60 +23,67 @@
         </view>
 
         <yr-card
+        data-channel="ziwei"
         start-time="0.1s"
         background-color="#EB5C6E"
         icon="character.png"
         title="摸头知性格"
         description="根据你的生日推测你是个什么样的人，还可给出你生活、事业、爱情等方面的建议。快来试试吧！"
-        bind:tap="onZiweiClick"></yr-card>
+        bind:tap="onChannelClick"></yr-card>
 
         <yr-card
+        data-channel="flower"
         start-time="0.2s"
         background-color="pink"
         icon="plum-blossom.png"
         title="桃花朵朵开"
         description="今天能不能遇到那个TA？最好的猎手都以猎物的方式出现，桃花旺的时候要展示自己的魅力！"
-        bind:tap="onFlowerClick"></yr-card>
+        bind:tap="onChannelClick"></yr-card>
 
         <yr-card
+        data-channel="yuanbao"
         start-time="0.3s"
         background-color="burlywood"
         icon="yuanbao.png"
         title="飞来小元宝"
         description="今天能不能搞到钱？打铁还需自身硬，赚钱还是得有金刚钻！"
-        bind:tap="onTest"></yr-card>
+        bind:tap="onChannelClick"></yr-card>
 
-        <yr-card
+        <yr-card wx:if="{{false}}"
+        data-channel="work"
         start-time="0.4s"
         background-color="cornflowerblue"
         icon="work.png"
         title="整顿职场"
         description="今天工作顺不顺利？那得看你今天有没有拍老板的马屁！拍的有没有死角？"
-        bind:tap="onTest"></yr-card>
+        bind:tap="onChannelClick"></yr-card>
 
-        <yr-card
+        <yr-card wx:if="{{false}}"
+        data-channel="kua"
         start-time="0.15s"
         background-color="#0abab5"
         icon="cool.png"
         title="一顿猛夸"
         description="今天不开心？我来夸夸你！夸你个顺风顺水，夸你个虎虎生威，夸你个好人一生平安！"
-        bind:tap="onTest"></yr-card>
+        bind:tap="onChannelClick"></yr-card>
 
-        <yr-card
+        <yr-card wx:if="{{false}}"
+        data-channel="find"
         start-time="0.25s"
         background-color="plum"
         icon="zoom.png"
         title="东西掉了？"
         description="东西掉了你就捡起来呀！你看，不就在那吗？"
-        bind:tap="onTest"></yr-card>
+        bind:tap="onChannelClick"></yr-card>
 
-        <yr-card
+        <yr-card wx:if="{{false}}"
+        data-channel="idle"
         start-time="0.35s"
         background-color="yellowgreen"
         icon="idle.png"
         title="干点啥呢？"
         description="都这么大的人了，还要我教你做事吗？那我就说一说吧！"
-        bind:tap="onTest"></yr-card>
+        bind:tap="onChannelClick"></yr-card>
 
     </view>
 </scroll-view>

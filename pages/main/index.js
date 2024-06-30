@@ -43,22 +43,11 @@ Page({
         console.log(lunar.toFullString());
   },
 
-  onZiweiClick(e) {
-    wx.navigateTo({
-      url: '/pages/ziwei/index',
-    })
-    console.log(e);
-  },
-
-  onFlowerClick(e) {
-    wx.navigateTo({
-      url: '/pages/flower/index',
-    })
-    console.log(e);
-  },
-
-  onTest(e) {
-      console.log("component tapped" + toString(e));
+  onChannelClick(e) {
+      const channel = e.target.dataset.channel;
+      wx.navigateTo({
+        url: `/pages/${channel}/index`,
+      });
   },
 
   /**

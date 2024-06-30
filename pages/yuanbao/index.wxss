@@ -1,0 +1,51 @@
+/* pages/flower/index.wxss */
+
+page {
+    width: 100%;
+    background-color: burlywood;
+}
+
+.pull-area {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%; /* 根据需要调整高度 */
+    z-index: -1;
+    background-color: burlywood;
+}
+
+
+.banner-container {
+    display: flex;
+    align-items: center;
+    /* 垂直居中 */
+    border-radius: 10px;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    padding: 10px;
+    color: brown;
+}
+
+.banner-img {
+    height: 88px;
+    width: 88px;
+    margin: 10px;
+    transition: all 0.1s ease;
+}
+
+.banner-img:active {
+    scale: 1.5;
+}
+
+.banner-text-title {
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 24px;
+}
+
+.banner-text-desc {
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 10px;
+}

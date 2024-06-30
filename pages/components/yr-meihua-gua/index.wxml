@@ -1,5 +1,5 @@
 <!--pages/components/yr-meihua-gua/index.wxml-->
-<view class="yr-meihua-gua-container">
+<view class="yr-meihua-gua-container" hidden="{{!show}}">
     <view class="gua-pairs">
         <view class="gua-pair">
             <view class="gua-area-tips">

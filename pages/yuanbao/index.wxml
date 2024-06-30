@@ -5,25 +5,25 @@
     <view class="container">
         <view class="banner-container idle-bkg">
             <view>
-                <image class="banner-img" src="../../resources/img/plum-blossom.png"></image>
+                <image class="banner-img" src="../../resources/img/yuanbao.png"></image>
             </view>
             <div>
-                <view class="banner-text-title">今日桃花几朵</view>
-                <view class="banner-text-desc"> 无论桃花是不是旺，还是要主动提升个人的魅力，吸引理想的异性，走出去，主动迎TA走进来</view>
+                <view class="banner-text-title">今日元宝几颗</view>
+                <view class="banner-text-desc">无论今日财运如何，努力提升自己，接得住幸运的来临才有可能守住财富喔</view>
             </div>
         </view>
 
         <yr-five-slot slots="{{flowerSlots}}"
-        tips-head-text="桃花语"
+        tips-head-text="财富榜样"
         tips-text-list="{{tips}}"
-        color="#EB5C6E"
+        color="brown"
         text="{{flowerText}}"/>
 
         <yr-meihua-gua show="{{renderMeihua}}" rands="{{rands}}" bind:divined="onMeihuaDivined" />
 
-        <yr-button bind:click="onDivineTapped" text="看看今日桃花" loading-text="TA来了..." icon="taohua.png" loading="{{loadingModel}}" />
+        <yr-button bind:click="onDivineTapped" text="解读今日元宝" loading-text="一大波财富加载中..." icon="yuanbao.png" loading="{{loadingModel}}" />
 
-        <yr-loading-content style="width: 100%;" color="#EB5C6E" loading-model="{{loadingModel}}" html="{{modelExplain}}" show="{{showContentArea}}" />
+        <yr-loading-content style="width: 100%;" color="brown" loading-model="{{loadingModel}}" html="{{modelExplain}}" show="{{showContentArea}}" />
 
         <yr-agreements show="{{showAgreements}}" bind:agreed="onAgreementsUpdated" />
 

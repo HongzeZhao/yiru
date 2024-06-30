@@ -2,7 +2,8 @@
   "pages": [
     "pages/main/index",
     "pages/ziwei/index",
-    "pages/flower/index"
+    "pages/flower/index",
+    "pages/yuanbao/index"
   ],
   "window": {
     "navigationBarTextStyle": "white",
