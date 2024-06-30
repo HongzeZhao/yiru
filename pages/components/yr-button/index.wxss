@@ -19,8 +19,8 @@
 
 .divine-img {
     overflow: hidden;
-    width: 100px;
     height: 64px;
+    width: 64px;
     border-radius: 10px;
 }
 

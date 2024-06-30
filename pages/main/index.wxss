@@ -79,41 +79,6 @@
     margin-left: 20px;
 }
 
-/* 颜色样式 */
-.pink-bkg {
-    background-color: #EB5C6E;
-    /* 淡粉色 */
-}
-
-.tiffany-bkg {
-    background-color: #0abab5;
-    /* Tiffany色 */
-}
-
-.flower-bkg {
-    background-color: pink;
-}
-
-.money-bkg {
-    background-color: burlywood;
-}
-
-.work-bkg {
-    background-color: cornflowerblue;
-}
-
-.flurt-bkg {
-    background-color: #0abab5;
-}
-
-.missing-bkg {
-    background-color: plum;
-}
-
-.idle-bkg {
-    background-color: yellowgreen;
-}
-
 .yiji-container {
     display: flex;
     flex-direction: column;

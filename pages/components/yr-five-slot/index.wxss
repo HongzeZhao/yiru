@@ -1,0 +1,89 @@
+/* pages/components/yr-five-slot/index.wxss */
+
+.yr-five-slot-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.yr-tips-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    margin-left: 20px;
+}
+
+.yr-tips-head-text {
+    font-size: 12px;
+    color: white;
+    border-radius: 5px;
+    margin: 0px 5px 1px 0px;
+    padding: 2px 5px 2px 5px;
+}
+
+.yr-tips-text {
+    font-size: 12px;
+    border-bottom: solid 1px;
+}
+
+.yr-slot-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    margin: 5px 5px 5px 5px;
+}
+
+.yr-slot {
+    margin: 5px;
+    transition: all 0.1s ease;
+}
+
+.yr-slot:active {
+    scale: 1.5;
+}
+
+.yr-slot-img {
+    width: 48px;
+    height: 48px;
+}
+
+.yr-text-row {
+    margin: 0 10px 20px 0;
+}
+
+.yr-text {
+    font-size: 14px;
+}
+
+/* 定义摇头晃脑的动画 */
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-3deg);
+    }
+
+    75% {
+        transform: rotate(3deg);
+    }
+}
+
+/* 应用动画 */
+.shake-infinate {
+    animation: shake 0.5s infinite;
+}
+
+.expanded {
+    scale: 1.5;
+}

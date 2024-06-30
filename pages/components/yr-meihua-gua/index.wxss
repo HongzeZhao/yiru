@@ -1,0 +1,145 @@
+/* pages/components/yr-meihua-gua/index.wxss */
+
+.yr-meihua-gua-container {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px 5px 10px 5px;
+}
+
+.gua-pairs {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.gua-pair {
+    padding-left: 10px;
+    padding-right: 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.gua-area {
+  font-size: 14px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+.gua-area .gua {
+  color:#EB5C6E;
+}
+
+.gua-area .manifest {
+  color:#0abab5;
+}
+
+.gua-area-tips {
+  font-size: 8px;
+  color: gray;
+}
+
+.yao-area {
+  margin: 12px;
+  margin-left: 30px;
+  margin-right: 30px;
+  font-size: 12px;
+  color: #EB5C6E;
+}
+
+.yaoi {
+  background-color: #EB5C6E;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 5px 5px 5px -10px;
+  color: white;
+  font-size: 10px;
+}
+
+.gua-pic {
+  display: flex; /* 使用flexbox布局 */
+  flex-direction: column; /* 子元素竖直排列 */
+  align-items: center; /* 垂直居中 */
+}
+
+.yao-group {
+    position: relative;
+    display: flex; /* 使用flexbox布局 */
+    flex-direction: column; /* 子元素竖直排列 */
+    align-items: center; /* 垂直居中 */
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding: 5px;
+    border: 1px dashed #0abab5;
+    border-radius: 5px;
+}
+
+.yao-pic {
+  margin-top: 2px;
+  margin-bottom: 2px;
+  width: 64px;
+  height: 10px;
+  border-radius: 3px;
+}
+
+.gua-wuxing {
+    font-size: 10px;
+    position: absolute;
+    top: 15px;
+    left: -10px;
+    background-color: #0abab5;
+    color: white;
+    border-radius: 2px;
+    padding: 0px 2px 0px 2px;
+}
+
+.gua-name {
+    font-size: 10px;
+    position: absolute;
+    top: -3px;
+    left: -10px;
+    background-color: #EB5C6E;
+    color: white;
+    border-radius: 2px;
+    padding: 0px 2px 0px 2px;
+}
+
+.gua-tiyong {
+    font-size: 10px;
+    position: absolute;
+    top: 33px;
+    left: -10px;
+    background-color: cornflowerblue;
+    color: white;
+    border-radius: 2px;
+    padding: 0px 2px 0px 2px;
+}
+
+.shengke-direct-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+
+.shengke-direct {
+    background-color: red;
+    padding: 2px;
+    border-radius: 5px;
+    width: 12px;
+    height: 12px;
+}
+
+.shengke-direct-type {
+    color: white;
+    padding: 0 2px 0 2px;
+    font-size: 10px;
+    border-radius: 2px;
+    background-color: green;
+}

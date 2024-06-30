@@ -1,0 +1,16 @@
+<!--pages/components/yr-five-slot/index.wxml-->
+<view class="yr-five-slot-container" style="color: {{color}};">
+    <view class="yr-tips-row">
+        <text class="yr-tips-head-text" style="background-color: {{color}};">{{tipsHeadText}}</text>
+        <text class="yr-tips-text">{{tipsText}}</text>
+    </view>
+    <view class="yr-slot-row">
+        <view class="yr-slot" wx:for="{{slots}}" wx:key="slot" bind:tap="onTouchAnyFlower">
+            <image class="yr-slot-img shake-infinate" style="animation-delay:{{index/10.0}}s;{{item.style}}"
+            src="../../../resources/img/{{item.icon}}"></image>
+        </view>
+    </view>
+    <view class="yr-text-row">
+        <text class="yr-text">{{text}}</text>
+    </view>
+</view>

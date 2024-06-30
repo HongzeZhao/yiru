@@ -7,6 +7,5 @@
     "yr-share-button": "/pages/components/yr-share-button"
   },
   "navigationBarBackgroundColor": "#EB5C6E",
-  "navigationBarTextStyle": "white",
-  "enableShareAppMessage": true
+  "navigationBarTextStyle": "white"
 }

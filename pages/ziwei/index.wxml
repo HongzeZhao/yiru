@@ -15,7 +15,7 @@
 
         <yr-user-info color="#EB5C6E" head-color="pink" bind:birthday="onInputChanged" bind:gender="onInputChanged" date-valid="{{dateValid}}" hour-valid="{{hourValid}}" gender-valid="{{genderValid}}"></yr-user-info>
 
-        <yr-button bind:click="onDivineTapped" text="点击开始分析" loading-text="嘛咪嘛咪哄，请稍等..." icon="startread.png" loading="{{loadingModel}}" />
+        <yr-button bind:click="onDivineTapped" text="点击开始分析" loading-text="嘛咪嘛咪哄，请稍等..." icon="press.png" loading="{{loadingModel}}" />
 
         <yr-loading-content style="width: 100%;" color="#EB5C6E" loading-model="{{loadingModel}}" html="{{modelExplain}}" show="{{showContentArea}}" />
 
