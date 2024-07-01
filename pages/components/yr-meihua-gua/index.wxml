@@ -1,90 +1,93 @@
 <!--pages/components/yr-meihua-gua/index.wxml-->
 <view class="yr-meihua-gua-container" hidden="{{!show}}">
-    <view class="gua-pairs">
-        <view class="gua-pair">
-            <view class="gua-area-tips">
-            本卦（现在状态）
-            </view>
-            <view class="gua-area">
-                <text class="gua">{{benGua.name}}</text>
-                <text class="manifest">{{benGua.manifest}}</text>
-            </view>
-            <view class="gua-pic">
-                <view class="yao-group">
-                    <image wx:for="{{benGua.upCodes}}" wx:key="benYao" wx:for-item="benYao"  class="yao-pic" src="../../../resources/yao_pic/{{benYao}}.png"></image>
-                    <view class="gua-name">{{benGua.up.name}}</view>
-                    <view class="gua-wuxing">{{benGua.up.wuxing}}</view>
-                    <view class="gua-tiyong">{{benGua.up.tiyong}}</view>
-                </view>
-                <view class="shengke-direct-row">
-                    <image class="shengke-direct" src="../../../resources/img/arrow-{{benGua.shengke.direction}}.png"/>
-                    <view class="shengke-direct-type">{{benGua.shengke.type}}</view>
-                </view>
-                <view class="yao-group">
-                    <image wx:for="{{benGua.downCodes}}" wx:key="benYao" wx:for-item="benYao"  class="yao-pic" src="../../../resources/yao_pic/{{benYao}}.png"></image>
-                    <view class="gua-name">{{benGua.down.name}}</view>
-                    <view class="gua-wuxing">{{benGua.down.wuxing}}</view>
-                    <view class="gua-tiyong">{{benGua.down.tiyong}}</view>
-                </view>
-            </view>
+  <view class="gua-pairs">
+    <view class="gua-pair">
+      <view class="gua-luck">{{benGua.shengke.luck}}</view>
+      <view class="gua-area-tips">
+        本卦（现在状态）
+      </view>
+      <view class="gua-area">
+        <text class="gua">{{benGua.name}}</text>
+        <text class="manifest">{{benGua.manifest}}</text>
+      </view>
+      <view class="gua-pic">
+        <view class="yao-group">
+          <image wx:for="{{benGua.upCodes}}" wx:key="benYao" wx:for-item="benYao" class="yao-pic" src="../../../resources/yao_pic/{{benYao}}.png"></image>
+          <view class="gua-name">{{benGua.up.name}}</view>
+          <view class="gua-wuxing">{{benGua.up.wuxing}}</view>
+          <view class="gua-tiyong">{{benGua.up.tiyong}}</view>
         </view>
-        <view class="gua-pair">
-            <view class="gua-area-tips">
-            互卦（发展状态）
-            </view>
-            <view class="gua-area">
-                <text class="gua">{{huGua.name}}</text>
-                <text class="manifest">{{huGua.manifest}}</text>
-            </view>
-            <view class="gua-pic">
-                <view class="yao-group">
-                    <image wx:for="{{huGua.upCodes}}" wx:key="huYao" wx:for-item="huYao" class="yao-pic" src="../../../resources/yao_pic/{{huYao}}.png"></image>
-                    <view class="gua-name">{{huGua.up.name}}</view>
-                    <view class="gua-wuxing">{{huGua.up.wuxing}}</view>
-                    <view class="gua-tiyong">{{huGua.up.tiyong}}</view>
-                </view>
-                <view class="shengke-direct-row">
-                    <image class="shengke-direct" src="../../../resources/img/arrow-{{huGua.shengke.direction}}.png"/>
-                    <view class="shengke-direct-type">{{huGua.shengke.type}}</view>
-                </view>
-                <view class="yao-group">
-                    <image wx:for="{{huGua.downCodes}}" wx:key="huYao" wx:for-item="huYao" class="yao-pic" src="../../../resources/yao_pic/{{huYao}}.png"></image>
-                    <view class="gua-name">{{huGua.down.name}}</view>
-                    <view class="gua-wuxing">{{huGua.down.wuxing}}</view>
-                    <view class="gua-tiyong">{{huGua.down.tiyong}}</view>
-                </view>
-            </view>
+        <view class="shengke-direct-row">
+          <image class="shengke-direct" src="../../../resources/img/arrow-{{benGua.shengke.direction}}.png" />
+          <view class="shengke-direct-type">{{benGua.shengke.type}}</view>
         </view>
-        <view class="gua-pair">
-            <view class="gua-area-tips">
-            变卦（最终状态）
-            </view>
-            <view class="gua-area">
-                <text class="gua">{{bianGua.name}}</text>
-                <text class="manifest">{{bianGua.manifest}}</text>
-            </view>
-            <view class="gua-pic">
-                <view class="yao-group">
-                    <image wx:for="{{bianGua.upCodes}}" wx:key="bianYao" wx:for-item="bianYao" class="yao-pic" src="../../../resources/yao_pic/{{bianYao}}.png"></image>
-                    <view class="gua-name">{{bianGua.up.name}}</view>
-                    <view class="gua-wuxing">{{bianGua.up.wuxing}}</view>
-                    <view class="gua-tiyong">{{bianGua.up.tiyong}}</view>
-                </view>
-                <view class="shengke-direct-row">
-                    <image class="shengke-direct" src="../../../resources/img/arrow-{{bianGua.shengke.direction}}.png"/>
-                    <view class="shengke-direct-type">{{bianGua.shengke.type}}</view>
-                </view>
-                <view class="yao-group">
-                    <image wx:for="{{bianGua.downCodes}}" wx:key="bianYao" wx:for-item="bianYao" class="yao-pic" src="../../../resources/yao_pic/{{bianYao}}.png"></image>
-                    <view class="gua-name">{{bianGua.down.name}}</view>
-                    <view class="gua-wuxing">{{bianGua.down.wuxing}}</view>
-                    <view class="gua-tiyong">{{bianGua.down.tiyong}}</view>
-                </view>
-            </view>
+        <view class="yao-group">
+          <image wx:for="{{benGua.downCodes}}" wx:key="benYao" wx:for-item="benYao" class="yao-pic" src="../../../resources/yao_pic/{{benYao}}.png"></image>
+          <view class="gua-name">{{benGua.down.name}}</view>
+          <view class="gua-wuxing">{{benGua.down.wuxing}}</view>
+          <view class="gua-tiyong">{{benGua.down.tiyong}}</view>
         </view>
+      </view>
     </view>
-    <view class="yao-area">
-        <text class="yaoi">{{benGua.yaoIndex}}</text>
-        <text class="yao">{{benGua.yaoText}}</text>
+    <view class="gua-pair">
+      <view class="gua-luck">{{huGua.shengke.luck}}</view>
+      <view class="gua-area-tips">
+        互卦（发展状态）
+      </view>
+      <view class="gua-area">
+        <text class="gua">{{huGua.name}}</text>
+        <text class="manifest">{{huGua.manifest}}</text>
+      </view>
+      <view class="gua-pic">
+        <view class="yao-group">
+          <image wx:for="{{huGua.upCodes}}" wx:key="huYao" wx:for-item="huYao" class="yao-pic" src="../../../resources/yao_pic/{{huYao}}.png"></image>
+          <view class="gua-name">{{huGua.up.name}}</view>
+          <view class="gua-wuxing">{{huGua.up.wuxing}}</view>
+          <view class="gua-tiyong">{{huGua.up.tiyong}}</view>
+        </view>
+        <view class="shengke-direct-row">
+          <image class="shengke-direct" src="../../../resources/img/arrow-{{huGua.shengke.direction}}.png" />
+          <view class="shengke-direct-type">{{huGua.shengke.type}}</view>
+        </view>
+        <view class="yao-group">
+          <image wx:for="{{huGua.downCodes}}" wx:key="huYao" wx:for-item="huYao" class="yao-pic" src="../../../resources/yao_pic/{{huYao}}.png"></image>
+          <view class="gua-name">{{huGua.down.name}}</view>
+          <view class="gua-wuxing">{{huGua.down.wuxing}}</view>
+          <view class="gua-tiyong">{{huGua.down.tiyong}}</view>
+        </view>
+      </view>
     </view>
+    <view class="gua-pair">
+      <view class="gua-luck">{{bianGua.shengke.luck}}</view>
+      <view class="gua-area-tips">
+        变卦（最终状态）
+      </view>
+      <view class="gua-area">
+        <text class="gua">{{bianGua.name}}</text>
+        <text class="manifest">{{bianGua.manifest}}</text>
+      </view>
+      <view class="gua-pic">
+        <view class="yao-group">
+          <image wx:for="{{bianGua.upCodes}}" wx:key="bianYao" wx:for-item="bianYao" class="yao-pic" src="../../../resources/yao_pic/{{bianYao}}.png"></image>
+          <view class="gua-name">{{bianGua.up.name}}</view>
+          <view class="gua-wuxing">{{bianGua.up.wuxing}}</view>
+          <view class="gua-tiyong">{{bianGua.up.tiyong}}</view>
+        </view>
+        <view class="shengke-direct-row">
+          <image class="shengke-direct" src="../../../resources/img/arrow-{{bianGua.shengke.direction}}.png" />
+          <view class="shengke-direct-type">{{bianGua.shengke.type}}</view>
+        </view>
+        <view class="yao-group">
+          <image wx:for="{{bianGua.downCodes}}" wx:key="bianYao" wx:for-item="bianYao" class="yao-pic" src="../../../resources/yao_pic/{{bianYao}}.png"></image>
+          <view class="gua-name">{{bianGua.down.name}}</view>
+          <view class="gua-wuxing">{{bianGua.down.wuxing}}</view>
+          <view class="gua-tiyong">{{bianGua.down.tiyong}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="yao-area">
+    <text class="yaoi">{{benGua.yaoIndex}}</text>
+    <text class="yao">{{benGua.yaoText}}</text>
+  </view>
 </view>
