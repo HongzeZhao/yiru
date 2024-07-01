@@ -1,4 +1,6 @@
 // pages/flower/index.js
+const { getCachedUserInfo } = require('../utils/cached');
+const { astro } = require('iztro');
 Page({
 
     /**
@@ -117,7 +119,7 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-        const data = wx.getStorageSync('flower.data');
+        const data = wx.getStorageSync('yuanbao.data');
         if (data && data.text) {
             this.setData({
                 modelExplain: data.text,
@@ -148,7 +150,7 @@ Page({
     getTodayRandsKey() {
         const now = new Date();
         const today = `${now.getFullYear()}${now.getMonth()+1}${now.getDate()}`;
-        return `flower.today.rands.${today}`;
+        return `yuanbao.today.rands.${today}`;
     },
 
     /**
@@ -211,16 +213,25 @@ Page({
             loadingModel: true,
             showContentArea: true
         });
+
+        const cached = getCachedUserInfo();
+        let payload = {
+          secret: '911',
+          channel: 'yuanbao',
+          meihua: this.data.meihua,
+          ...cached
+        };
+        console.log(`yuanbao.divine.cached: ${JSON.stringify(cached)}`);
+        if (cached.birthday && cached.birthhour && cached.gender) {
+          payload.astrolabe = astro.bySolar(cached.birthday, parseInt(cached.birthhour), cached.gender, true, 'zh-CN');
+          payload.horoscope = payload.astrolabe.horoscope(new Date());
+        }
     
         let that = this;
         wx.request({
-            url: 'https://uireal.com/divine', // 必须是HTTPS
+            url: 'https://uireal.com/yiru/yuanbao', // 必须是HTTPS
             method: 'POST',
-            data: {
-              secret: '911',
-              channel: 'yuanbao',
-              meihua: that.data.meihua
-            },
+            data: payload,
             header: {
               'content-type': 'application/json' // 默认值
             },
@@ -230,7 +241,7 @@ Page({
                     renderMeihua: res.data.renderMeihua,
                     loadingModel: false
                 })
-              wx.setStorageSync('flower.data', res.data);
+              wx.setStorageSync('yuanbao.data', res.data);
               console.log(res.data)
             },
             fail(err) {

@@ -1,7 +1,7 @@
 // pages/components/yr-meihua-gua/index.js
 const {
     divineByMeihuaNumbers
-} = require("../../../resources/meihua");
+} = require("../../utils/meihua");
 
 function getRands() {
     console.log("rands called");

@@ -1,7 +1,7 @@
 // pages/components/yr-agreements/index.js
 const {
     getAgreements
-} = require('../../../resources/agreements');
+} = require('../../utils/agreements');
 
 Component({
 

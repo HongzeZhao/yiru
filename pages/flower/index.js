@@ -1,4 +1,6 @@
 // pages/flower/index.js
+const { getCachedUserInfo } = require('../utils/cached');
+const { astro } = require('iztro');
 Page({
 
     /**
@@ -213,16 +215,25 @@ Page({
             loadingModel: true,
             showContentArea: true
         });
+
+        const cached = getCachedUserInfo();
+        let payload = {
+          secret: '911',
+          channel: 'flower',
+          meihua: this.data.meihua,
+          ...cached
+        };
+        console.log(`flower.divine.cached: ${JSON.stringify(cached)}`);
+        if (cached.birthday && cached.birthhour && cached.gender) {
+          payload.astrolabe = astro.bySolar(cached.birthday, parseInt(cached.birthhour), cached.gender, true, 'zh-CN');
+          payload.horoscope = payload.astrolabe.horoscope(new Date());
+        }
     
         let that = this;
         wx.request({
-            url: 'https://uireal.com/divine', // 必须是HTTPS
+            url: 'https://uireal.com/yiru/flower', // 必须是HTTPS
             method: 'POST',
-            data: {
-              secret: '911',
-              channel: 'flower',
-              meihua: that.data.meihua
-            },
+            data: payload,
             header: {
               'content-type': 'application/json' // 默认值
             },

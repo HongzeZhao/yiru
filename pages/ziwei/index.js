@@ -1,7 +1,5 @@
 // pages/meihua-input/mhinput.js
-const {
-    getZiweiAstrolabe
-} = require('../../resources/ziwei_prompt');
+const { astro } = require('iztro');
 
 Page({
 
@@ -30,20 +28,20 @@ Page({
             const date = this.data.date;
             const hour = this.data.hour;
             const gender = this.data.gender;
-            const astro = getZiweiAstrolabe(date, hour, gender);
+            const astrolabe = astro.bySolar(date, parseInt(hour), gender, true, 'zh-CN');
+            const horoscope = astrolabe.horoscope(new Date());
             let that = this;
             wx.request({
-                url: 'https://uireal.com/divine', // 必须是HTTPS
+                url: 'https://uireal.com/yiru/ziwei', // 必须是HTTPS
                 method: 'POST',
                 data: {
                     secret: '911',
                     channel: 'ziwei',
-                    ziwei: {
-                        birthday: date,
-                        time: hour,
-                        gender: gender,
-                        desc: astro.desc,
-                    },
+                    birthday: date,
+                    birthhour: hour,
+                    gender: gender,
+                    astrolabe: astrolabe,
+                    horoscope: horoscope
                 },
                 header: {
                     'content-type': 'application/json' // 默认值
