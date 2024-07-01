@@ -123,6 +123,7 @@ Page({
         if (data && data.text) {
             this.setData({
                 modelExplain: data.text,
+                renderMeihua: data.renderMeihua,
                 showContentArea: true
             });
         }
