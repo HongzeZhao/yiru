@@ -6,20 +6,20 @@ Component({
    */
   properties: {
     html: {
-        type: String,
-        value: ""
+      type: String,
+      value: ""
     },
     color: {
-        type: String,
-        value: "black"
+      type: String,
+      value: "black"
     },
     loadingModel: {
-        type: Boolean,
-        value: true
+      type: Boolean,
+      value: true
     },
     show: {
-        type: Boolean,
-        value: false
+      type: Boolean,
+      value: false
     }
   },
 
